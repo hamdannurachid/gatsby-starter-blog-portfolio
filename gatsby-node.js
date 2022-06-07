@@ -1,115 +1,121 @@
-const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const path = require('path')
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  if (node.internal.type === 'MarkdownRemark') {
+    const fileNode = getNode(node.parent);
+    actions.createNodeField({
+      node,
+      name: 'slug',
+      value: fileNode.name.toLowerCase()
+    });
+  }
+}
 
-  // Define a template for blog post
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
 
-  // Get all markdown blog posts sorted by date
-  const result = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
-        ) {
-          nodes {
-            id
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
+
+  const collections = graphql(`
+   query {
+      allMarkdownRemark (filter: {frontmatter: {key: {eq: "blog"}}}, sort: {fields: frontmatter___title, order: ASC}){
+        edges {
+          node {
             fields {
               slug
+            }
+            frontmatter {
+              title
             }
           }
         }
       }
-    `
-  )
+    }
+  `).then(result => {
 
-  if (result.errors) {
-    reporter.panicOnBuild(
-      `There was an error loading your blog posts`,
-      result.errors
-    )
-    return
-  }
+    // const posts = res.data.allMarkdownRemark.edges;
+    const blog = result.data.allMarkdownRemark.edges;
 
-  const posts = result.data.allMarkdownRemark.nodes
+    blog.forEach(({ node }, index) => {
 
-  // Create blog posts pages
-  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
-  // `context` is available in the template as a prop and as a variable in GraphQL
+      const prev = index === 0 ? null : blog[index - 1].node;
+      const next = index === blog.length - 1 ? null : blog[index + 1].node
 
-  if (posts.length > 0) {
-    posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
       createPage({
-        path: post.fields.slug,
-        component: blogPost,
+        path: '/blog/' + node.fields.slug,
+        component: path.resolve('./src/templates/detail_blog.js'),
         context: {
-          id: post.id,
-          previousPostId,
-          nextPostId,
+          slug: node.fields.slug,
+          prev,
+          next
         },
-      })
-    })
-  }
-}
+      });
+    });
+  })
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
-  }
-}
-
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
-
-  // Explicitly define the siteMetadata {} object
-  // This way those will always be defined even if removed from gatsby-config.js
-
-  // Also explicitly define the Markdown frontmatter
-  // This way the "MarkdownRemark" queries will return `null` even when no
-  // blog posts are stored inside "content/blog" instead of returning an error
-  createTypes(`
-    type SiteSiteMetadata {
-      author: Author
-      siteUrl: String
-      social: Social
+  const posts = graphql(`
+    query {
+      allMarkdownRemark (filter: {frontmatter: {key: {eq: "belajar"}}}, sort: {fields: frontmatter___title, order: ASC}){
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              date
+              title 
+              key
+              category
+            }
+          }
+        }
+      }
     }
+  `).then(result => {
 
-    type Author {
-      name: String
-      summary: String
-    }
+    const artikel = result.data.allMarkdownRemark.edges;
 
-    type Social {
-      twitter: String
-    }
 
-    type MarkdownRemark implements Node {
-      frontmatter: Frontmatter
-      fields: Fields
-    }
+    artikel.forEach(({ node }, index) => {
 
-    type Frontmatter {
-      title: String
-      description: String
-      date: Date @dateformat
-    }
+      const prev = index === 0 ? null : artikel[index - 1].node;
+      const next = index === artikel.length - 1 ? null : artikel[index + 1].node
 
-    type Fields {
-      slug: String
-    }
-  `)
-}
+
+      createPage({
+        path: '/belajar/' + node.fields.slug,
+        component: path.resolve('./src/templates/detail_belajar.js'),
+        context: {
+          slug: node.fields.slug,
+          prev,
+          next
+        },
+      });
+
+
+      // Create blog post list pages
+      const postsPerPage = 2;
+      const numPages = Math.ceil(posts.length / postsPerPage);
+
+      Array.from({ length: numPages }).forEach((_, i) => {
+        createPage({
+          path: i === 0 ? `/` : `/${i + 1}`,
+          component: path.resolve('./src/templates/detail_belajar.js'),
+          context: {
+            limit: postsPerPage,
+            skip: i * postsPerPage,
+            numPages,
+            currentPage: i + 1
+          },
+        });
+      });
+
+
+
+    });
+  })
+
+  return Promise.all([collections, posts])
+};
+
