@@ -1,5 +1,14 @@
-
 @font-face {
     font-family: 'HK Grotesk';
     src: url('https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/hk-grotesk.min.css');
+}
+
+@font-face {
+    font-family: 'Intro-Bd';
+    src: local('Intro-Trial-Bd'), url('../fonts/Intro/Intro-Trial-BdAlt.ttf');
+}
+
+@font-face {
+    font-family: 'Intro-Md';
+    src: local('Intro-Trial-Md'), url('../fonts/Intro/Intro-Trial-MdAlt.ttf');
 }

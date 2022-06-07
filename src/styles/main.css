@@ -10,6 +10,16 @@
         font-family: 'HK Grotesk', sans-serif;
         background-color: #F2F1EF !important;
     }
+
+    h1 {
+      font-family: 'Intro-Bd', sans-serif;
+      @apply text-gray-900
+    }
+
+    h4 {
+      font-family: 'Intro-Bd', sans-serif;
+      @apply text-gray-900
+    }
   }
   
 @layer components {
