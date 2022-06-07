@@ -1,14 +1,16 @@
+const { lazy } = require("react")
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Hamdan Nurachid`,
     author: {
-      name: `Kyle Mathews`,
+      name: `Hamdan Nurachid`,
       summary: `who lives and works in San Francisco building useful things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `hamdannur`,
     },
   },
   plugins: [
@@ -37,7 +39,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 630,
+              maxWidth: 1440,
+              linkImagesToOriginal: false,
+              loading: 'lazy',
             },
           },
           {

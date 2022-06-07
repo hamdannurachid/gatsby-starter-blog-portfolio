@@ -6,7 +6,9 @@ import { graphql, Link } from "gatsby"
 import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
 import Navbar from "../components/Navbar"
 
-export default ({ data, pageContext }) => {
+
+const DetailProject = ({ data, pageContext }) => {
+
     const post = data.markdownRemark;
     const prev = pageContext.prev
         ? {
@@ -25,7 +27,7 @@ export default ({ data, pageContext }) => {
     const htmlContent = { __html: post.html };
     return (
         <Layout>
-            <SEO title="project" />
+            <SEO title="Portfolio" />
             <Navbar />
             <div>
                 <div className="row">
@@ -58,9 +60,12 @@ export default ({ data, pageContext }) => {
                             </div>
 
 
-                            <div className="bg-white p-4">
+                            <div className="bg-white p-4 text-left text-lg">
                                 <GatsbyImage image={post.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" />
-                                <GatsbyImage image={post.frontmatter.contentImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" />
+                                {/* <GatsbyImage image={post.frontmatter.contentImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" /> */}
+                                <section
+                                    dangerouslySetInnerHTML={{ __html: post.html }}
+                                />
 
                             </div>
                         </div>
@@ -158,6 +163,7 @@ export default ({ data, pageContext }) => {
     );
 };
 
+export default DetailProject
 
 export const query = graphql`
 query projectPostBySlug($slug: String!) {

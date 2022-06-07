@@ -4,7 +4,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
 
-export default ({ data, pageContext }) => {
+
+const DetailBelajar = ({ data, pageContext }) => {
+
     const post = data.markdownRemark;
 
     const prev = pageContext.prev
@@ -131,6 +133,8 @@ export default ({ data, pageContext }) => {
         </Layout >
     );
 };
+
+export default DetailBelajar
 
 
 export const query = graphql`
