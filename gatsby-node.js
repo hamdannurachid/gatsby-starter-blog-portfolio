@@ -18,33 +18,42 @@ exports.createPages = ({ graphql, actions }) => {
 
   const collections = graphql(`
    query {
-      allMarkdownRemark (filter: {frontmatter: {key: {eq: "blog"}}}, sort: {fields: frontmatter___title, order: ASC}){
-        edges {
-          node {
-            fields {
-              slug
-            }
-            frontmatter {
-              title
+    allMarkdownRemark (filter: {frontmatter: {key: {eq: "portfolio"}}}, limit: 2, sort: {fields: frontmatter___date, order: ASC}){
+      edges {
+        node {
+          fields{
+            slug
+          }
+          frontmatter {
+            date
+            title
+            linkproto
+            thumbnailImage {
+              id
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED width: 1440, placeholder: BLURRED)
+              }
             }
           }
+          excerpt
         }
       }
+    }
     }
   `).then(result => {
 
     // const posts = res.data.allMarkdownRemark.edges;
-    const blog = result.data.allMarkdownRemark.edges;
+    const project = result.data.allMarkdownRemark.edges;
 
-    blog.forEach(({ node }, index) => {
+    project.forEach(({ node }, index) => {
 
-      const prev = index === 0 ? null : blog[index - 1].node;
-      const next = index === blog.length - 1 ? null : blog[index + 1].node
+      const prev = index === 0 ? null : project[index - 1].node;
+      const next = index === project.length - 1 ? null : project[index + 1].node
 
 
       createPage({
-        path: '/blog/' + node.fields.slug,
-        component: path.resolve('./src/templates/detail_blog.js'),
+        path: '/project/' + node.fields.slug,
+        component: path.resolve('./src/templates/detail_project.js'),
         context: {
           slug: node.fields.slug,
           prev,
@@ -94,7 +103,7 @@ exports.createPages = ({ graphql, actions }) => {
       });
 
 
-      // Create blog post list pages
+      // Create project post list pages
       const postsPerPage = 2;
       const numPages = Math.ceil(posts.length / postsPerPage);
 
