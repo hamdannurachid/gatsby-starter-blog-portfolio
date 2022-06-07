@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 // import { graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
 
 // import React from "react"
 import { StaticQuery, graphql } from "gatsby"
@@ -26,11 +26,19 @@ export default function Header() {
                   title
                   linkproto
                   thumbnailImage {
-                    id
                     childImageSharp {
-                      gatsbyImageData(layout: CONSTRAINED width: 1440, placeholder: BLURRED)
+                      gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED)
                     }
                   }
+                  contentImage {
+                    id
+                    childImageSharp {
+                      gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED)
+                    }
+                  }
+    
+                 
+                
                 }
                 excerpt
               }
@@ -77,9 +85,9 @@ export default function Header() {
 } */}
 
                                                         {/* <img src={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData.images.fallback.src} className="w-full h-full" alt="" /> */}
-                                                        {/* <GatsbyImage image={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData.images.fallback.src} alt={node.frontmatter.title} className="w-96 h-96 object-cover" /> */}
+                                                        <GatsbyImage image={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={node.frontmatter.title} className="w-full h-full object-cover" />
 
-                                                        {/* <GatsbyImage image={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={node.frontmatter.title} /> */}
+                                                        {/* <GatsbyImage image={node.frontmatter.thumbnailImage} alt={node.frontmatter.title} /> */}
 
                                                     </div>
 

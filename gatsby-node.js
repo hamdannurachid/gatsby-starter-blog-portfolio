@@ -34,6 +34,13 @@ exports.createPages = ({ graphql, actions }) => {
                 gatsbyImageData(layout: CONSTRAINED width: 1440, placeholder: BLURRED)
               }
             }
+
+            contentImage {
+              id
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED)
+              }
+            }
           }
           excerpt
         }
