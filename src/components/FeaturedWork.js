@@ -33,7 +33,7 @@ export default function Header() {
                   contentImage {
                     id
                     childImageSharp {
-                      gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED)
+                      gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED, formats: [AVIF])
                     }
                   }
     
