@@ -17,8 +17,8 @@ const menulink = [
 
     },
     {
-        name: 'Portfolio',
-        link: '/portfolio',
+        name: 'Project',
+        link: '/project',
 
     },
 
