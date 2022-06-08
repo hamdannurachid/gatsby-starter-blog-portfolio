@@ -2,10 +2,8 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
 import FeaturedWork from "../components/FeaturedWork"
-import Footer from "../components/Footer"
 
 
 const IndexPage = () => {
@@ -17,10 +15,10 @@ const IndexPage = () => {
 
       <main>
 
-        <Navbar />
+
         <Hero />
         <FeaturedWork />
-        <Footer />
+
 
       </main>
     </Layout >
