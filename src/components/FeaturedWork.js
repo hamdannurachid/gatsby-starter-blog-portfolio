@@ -98,7 +98,7 @@ export default function Header() {
                                                     {/* <p className="text-gray-900 text-lg">{person.bio}</p> */}
 
                                                     <div className="my-4">
-                                                        <Link to={`/project/` + node.fields.slug}>
+                                                        <Link to={`/project/` + node.fields.slug} className="underline hover:text-blue-600">
                                                             View Study Case
                                                         </Link>
 

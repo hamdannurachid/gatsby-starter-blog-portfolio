@@ -1,5 +1,5 @@
 ---
-title : "Washine - Booking Apps"
+title : "Washine - Carwash Booking App"
 date: "4-05-2022"
 key: portfolio
 thumbnailImage: ../@images/portfolio-02.png
