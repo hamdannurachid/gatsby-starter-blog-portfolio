@@ -28,7 +28,6 @@ const DetailProject = ({ data, pageContext }) => {
     return (
         <Layout>
             <SEO title="Portfolio" />
-            <Navbar />
             <div>
                 <div className="row">
                     <div className="mx-auto text-gray-900">
