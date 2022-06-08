@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
 import FeaturedWork from "../components/FeaturedWork"
+import Footer from "../components/Footer"
 
 
 const IndexPage = () => {
@@ -19,7 +20,7 @@ const IndexPage = () => {
         <Navbar />
         <Hero />
         <FeaturedWork />
-
+        <Footer />
 
       </main>
     </Layout >

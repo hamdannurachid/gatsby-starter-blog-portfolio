@@ -59,7 +59,7 @@ export default function Header() {
 
 
                                     <div className="flex items-center gap-x-2">
-                                        <h2 className="text-gray-900">
+                                        <h2 className="text-gray-900 text-[53px]">
                                             Featured Work
 
                                         </h2>
@@ -92,7 +92,7 @@ export default function Header() {
                                                     </div>
 
                                                     <div className="text-lg leading-6 font-medium space-y-1">
-                                                        <h3> {node.frontmatter.title}</h3>
+                                                        <h3 className="text-[32px]"> {node.frontmatter.title}</h3>
                                                     </div>
 
                                                     {/* <p className="text-gray-900 text-lg">{person.bio}</p> */}

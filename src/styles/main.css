@@ -16,6 +16,18 @@
       @apply text-gray-900
     }
 
+    h2 {
+      font-family: 'Intro-Bd', sans-serif;
+      @apply text-gray-900
+    }
+
+    h3 {
+      font-family: 'HK Grotesk', sans-serif;
+      @apply text-gray-900;
+      font-weight: bold;
+    }
+
+
     h4 {
       font-family: 'Intro-Bd', sans-serif;
       @apply text-gray-900
