@@ -14,6 +14,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-modal-routing`,
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
 
