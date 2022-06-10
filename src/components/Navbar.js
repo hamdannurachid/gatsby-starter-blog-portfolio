@@ -21,6 +21,11 @@ const menulink = [
         link: '/project',
 
     },
+    {
+        name: 'Gallery',
+        link: '/gallery',
+
+    },
 
 ]
 

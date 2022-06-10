@@ -72,18 +72,31 @@ exports.createPages = ({ graphql, actions }) => {
 
   const posts = graphql(`
     query {
-      allMarkdownRemark (filter: {frontmatter: {key: {eq: "belajar"}}}, sort: {fields: frontmatter___title, order: ASC}){
+      allMarkdownRemark (filter: {frontmatter: {key: {eq: "gallery"}}}, limit: 2, sort: {fields: frontmatter___date, order: ASC}){
         edges {
           node {
-            fields {
+            fields{
               slug
             }
             frontmatter {
               date
-              title 
-              key
-              category
+              title
+              linkproto
+              thumbnailImage {
+                id
+                childImageSharp {
+                  gatsbyImageData(layout: CONSTRAINED width: 1440, placeholder: BLURRED)
+                }
+              }
+  
+              contentImage {
+                id
+                childImageSharp {
+                  gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED, formats: [AVIF])
+                }
+              }
             }
+            excerpt
           }
         }
       }
@@ -100,8 +113,8 @@ exports.createPages = ({ graphql, actions }) => {
 
 
       createPage({
-        path: '/belajar/' + node.fields.slug,
-        component: path.resolve('./src/templates/detail_belajar.js'),
+        path: '/gallery/' + node.fields.slug,
+        component: path.resolve('./src/templates/detail_gallery.js'),
         context: {
           slug: node.fields.slug,
           prev,
@@ -117,7 +130,7 @@ exports.createPages = ({ graphql, actions }) => {
       Array.from({ length: numPages }).forEach((_, i) => {
         createPage({
           path: i === 0 ? `/` : `/${i + 1}`,
-          component: path.resolve('./src/templates/detail_belajar.js'),
+          component: path.resolve('./src/templates/detail_gallery.js'),
           context: {
             limit: postsPerPage,
             skip: i * postsPerPage,

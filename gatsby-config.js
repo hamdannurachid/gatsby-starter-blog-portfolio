@@ -15,8 +15,32 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-modal-routing`,
+    {
+      resolve: `gatsby-plugin-modal-routing`,
+      options: {
+        // A selector to set react-modal's app root to, default is `#___gatsby`
+        // See http://reactcommunity.org/react-modal/accessibility/#app-element
+        appElement: '#___gatsby',
+
+        // Object of props that will be passed to the react-modal container
+        // See http://reactcommunity.org/react-modal/#usage
+        modalProps: {},
+      }
+    },
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
+
+    `gatsby-transformer-json`,
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`
+
+      },
+    },
+
 
     {
       resolve: `gatsby-source-filesystem`,
