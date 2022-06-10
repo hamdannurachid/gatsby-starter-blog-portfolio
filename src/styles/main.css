@@ -43,3 +43,8 @@
 @layer utilities {
    
   }
+
+
+.ReactModal__Overlay {
+  z-index: 100 !important;
+}

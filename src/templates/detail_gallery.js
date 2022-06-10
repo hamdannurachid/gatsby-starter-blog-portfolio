@@ -43,27 +43,31 @@ const DetailGallery = ({ data, pageContext }) => {
                         <header>
                             <h1>
                                 Website Title
+
+                                <div className="row">
+                                    <div className="mx-auto text-gray-900">
+
+                                        <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 text-center justify-center ">
+                                            {/* <h2 className="text-3xl lg:text-5xl font-semibold">Creative Design Process</h2> */}
+
+                                            <div className="bg-white p-4 text-left text-lg">
+                                                <GatsbyImage image={post.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" />
+                                                {/* <GatsbyImage image={post.frontmatter.contentImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" /> */}
+                                                <h1>gallery konten</h1>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
                             </h1>
                         </header>
+
+
                     )}
                     <SEO title="Portfolio" />
 
-                    <div className="row">
-                        <div className="mx-auto text-gray-900">
-
-                            <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 text-center justify-center ">
-                                {/* <h2 className="text-3xl lg:text-5xl font-semibold">Creative Design Process</h2> */}
-
-                                <div className="bg-white p-4 text-left text-lg">
-                                    <GatsbyImage image={post.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" />
-                                    {/* <GatsbyImage image={post.frontmatter.contentImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" /> */}
-                                    <h1>gallery konten</h1>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
 
                 </div>
             )

@@ -14,7 +14,7 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-modal-routing`,
+    // `gatsby-plugin-modal-routing`,
     {
       resolve: `gatsby-plugin-modal-routing`,
       options: {
@@ -24,7 +24,9 @@ module.exports = {
 
         // Object of props that will be passed to the react-modal container
         // See http://reactcommunity.org/react-modal/#usage
-        modalProps: {},
+        modalProps: {
+          closeTimeoutMS: 500
+        },
       }
     },
     'gatsby-plugin-postcss',

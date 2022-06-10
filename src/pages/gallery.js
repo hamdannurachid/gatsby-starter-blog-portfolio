@@ -1,11 +1,11 @@
 // Gatsby supports TypeScript natively!
 import React from "react"
 // import { Link } from "gatsby"
-import Layout from "../components/layout"
+// import Layout from "../components/layout"
 import SEO from "../components/seo"
 // import { graphql } from "gatsby";
 import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
-import { Link } from 'gatsby-plugin-modal-routing'
+import { Link } from "gatsby-plugin-modal-routing"
 // import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Section from "../components/Section"
@@ -58,7 +58,14 @@ export default function Gallery() {
                                         <h2 className="text-gray-900 text-[53px] flex items-center gap-x-2">
                                             Gallery
                                             <Circle size="large" className="bg-blue-600" />
-                                            Design
+                                            Design <Link
+                                                to="/modal-example/"
+                                                state={{
+                                                    modal: true
+                                                }}
+                                            >
+                                                Login
+                                            </Link>
                                         </h2>
                                     </div>
                                     <ul
@@ -75,9 +82,7 @@ export default function Gallery() {
                                                     <div className="space-y-2">
                                                         <div className="text-lg leading-6 font-medium space-y-1">
 
-                                                            <Link to={node.fields.slug} state={{
-                                                                modal: true
-                                                            }} className="underline hover:text-blue-600">
+                                                            <Link to={node.fields.slug} asModal className="underline hover:text-blue-600">
                                                                 <h3>{node.frontmatter.title}</h3>
                                                             </Link>
                                                             <p className="text-indigo-600">Front-end Developer</p>
