@@ -10,7 +10,7 @@ const IndexPage = () => {
 
     return (
         <Layout>
-            <SEO title="Hamdan Nurachid" />
+            <SEO title="Project" />
 
             <FeaturedWork />
 

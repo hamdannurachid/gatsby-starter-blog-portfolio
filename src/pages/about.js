@@ -53,7 +53,7 @@ const About = () => {
 
     return (
         <Layout>
-            <SEO title="Hamdan Nurachid" />
+            <SEO title="About" />
 
             <main>
                 <Section>

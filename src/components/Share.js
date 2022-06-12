@@ -41,7 +41,7 @@ const Share = ({ socialConfig }) => (
             <FacebookIcon size={32} round={true} bgStyle={{ fill: '' }} />
 
         </FacebookShareButton>
-        <TwitterShareButton url={socialConfig.config.url} className="button outline-1 is-rounded facebook" >
+        <TwitterShareButton url={socialConfig.config.url} className="button outline-1 is-rounded facebook" via={`HamdanNur_`}>
             <TwitterIcon size={32} round={true} />
 
         </TwitterShareButton>

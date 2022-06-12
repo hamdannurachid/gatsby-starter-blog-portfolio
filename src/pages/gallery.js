@@ -15,7 +15,7 @@ import Layout from "../components/layout"
 export default function Gallery() {
     return (
         <Layout>
-            <SEO title="Hamdan Nurachid" />
+            <SEO title="Gallery" />
 
             <StaticQuery
                 query={graphql`
