@@ -7,6 +7,8 @@ module.exports = {
       name: `Hamdan Nurachid`,
       summary: `who lives and works in San Francisco building useful things.`,
     },
+    twitterHandle: '@swashata',
+    url: 'http://localhost:8000/',
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
