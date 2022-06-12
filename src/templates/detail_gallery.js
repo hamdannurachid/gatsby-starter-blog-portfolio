@@ -65,21 +65,42 @@ const DetailGallery = ({ data, pageContext }) => {
 
 
             <nav className="top-0 z-30 flex items-center justify-between flex-wrap py-6 px-8 sm:px-24 mybg transition-all duration-300 border-2 sticky w-full bg-white">
-                <div className="flex items-center lg:w-0 lg:flex-1 mr-6">
+
+
+
+                <div class="inline-flex items-center divide-x divide-gray-300">
+                    <div class="flex-shrink-0 flex pr-5">
+                        <Link
+                            to={`/`}
+                            href="#responsive-header"
+                            className="block mr-4 text-xl lg:inline-block lg:mt-0 text-gray-900"
+                        >
+                            {/* {siteTitle} */}
+                            <StaticImage src="../images/nav-ico.png" alt="icon" placeholder="none" width={140} />
+
+
+                        </Link>
+                    </div>
+                    <div class="min-w-0 flex-1 pl-5 py-1 text-sm text-gray-500 sm:py-3">
+                        <h1 className="text-xl">{post.frontmatter.title}</h1> </div>
+                </div>
+
+
+                {/* <div className="flex items-center lg:w-0 lg:flex-1 mr-6">
                     <Link
                         to={`/`}
                         href="#responsive-header"
                         className="block mr-4 text-xl lg:inline-block lg:mt-0 text-gray-900"
                     >
-                        {/* {siteTitle} */}
-                        <StaticImage src="../images/nav-ico.png" alt="icon" placeholder="none" width={100} />
+                       
+                        <StaticImage src="../images/nav-ico.png" alt="icon" placeholder="none" width={140} />
 
 
                     </Link>
 
                     <h1 className="text-xl">{post.frontmatter.title}</h1>
 
-                </div>
+                </div> */}
 
                 <div className="w-full flex items-center lg:flex lg:items-center lg:w-auto">
                     <div className="inline-block text-sm -ml-5 py-2">
