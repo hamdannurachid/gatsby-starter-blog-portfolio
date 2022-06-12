@@ -72,50 +72,6 @@ const DetailProject = ({ data, pageContext }) => {
 
 
                         <div className=" text-xl leading-normal p-12">
-                            {/* <BackgroundImage
-                                Tag="section"
-                                className={`w-full flex-none bg-cover rounded-lg overflow-hidden sm:mb-4`}
-                                style={{
-                                    backgroundPosition: "center",
-                                    backgroundRepeat: "no-repeat",
-                                    backgroundSize: "cover",
-                                    minHeight: "100vh",
-                                    width: "100%",
-                                }}
-                                fluid={post.frontmatter.contentImage.childImageSharp.fluid}
-                            >
-                            </BackgroundImage> */}
-
-
-                            {/* <img src={post.frontmatter.thumbnailImage.childImageSharp.fluid.src} className="w-96 h-96" /> */}
-
-
-                            {/* <img src={markdownRemark.frontmatter.image.childImageSharp.fluid.src} /> */}
-
-
-                            {/* {post.frontmatter.thumbnailImage &&
-                                <GatsbyImage fixed={post.frontmatter.thumbnailImage.childImageSharp.fluid} className="w-full h-96 object-cover" />
-                            } */}
-
-                            {/* <div className="text-gray-900 text-md">
-                                <div className="markdown w-full" dangerouslySetInnerHTML={htmlContent} />
-                            </div> */}
-
-
-                            {/* <Img src={post.frontmatter.thumbnailImage.childImageSharp.fluid.src} className="w-96 h-96 object-cover" /> */}
-
-                            {/* <Img fluid={data.hamdanAva.childImageSharp.fluid} alt="hamdan" /> */}
-                            {/* <img src={post.frontmatter.thumbnailImage.childImageSharp.fluid.src} alt="" srcset="" className=" w-full ini benar" /> */}
-
-
-                            {/* <h1>Tampil image</h1>
-
-
-                            <img className="object-cover max-h-full w-full" src={post.frontmatter.thumbnailImage} alt="" /> */}
-
-
-
-                            {/* <img className="object-cover max-h-full w-full" src={`https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80`} alt="" /> */}
 
 
 
@@ -175,15 +131,10 @@ query projectPostBySlug($slug: String!) {
             thumbnailImage {
                 id
                 childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED)
-                }
-              }
-              contentImage {
-                id
-                childImageSharp {
                   gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED, formats: [AVIF])
                 }
               }
+              
 
               
             

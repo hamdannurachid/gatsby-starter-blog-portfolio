@@ -45,16 +45,10 @@ export default function Header() {
                   linkproto
                   thumbnailImage {
                     childImageSharp {
-                      gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED)
+                      gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED, formats: [AVIF])
                     }
                   }
-                  contentImage {
-                    id
-                    childImageSharp {
-                      gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED)
-                    }
-                  }
-    
+                  
                  
                 
                 }
