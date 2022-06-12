@@ -39,7 +39,9 @@ const DetailGallery = ({ data, pageContext }) => {
 
     const post = data.markdownRemark;
 
-    const urlD = `gallery/` + post.fields.slug;
+    const urlD = `https://dev-hamdannur.netlify.app/gallery/` + post.fields.slug;
+
+    // const title = post.frontmatter.title;
 
     const prev = pageContext.prev
         ? {
@@ -76,21 +78,7 @@ const DetailGallery = ({ data, pageContext }) => {
                     </Link>
 
                     <h1 className="text-xl">{post.frontmatter.title}</h1>
-                    <h1> -------ini adalah url: {urlD}</h1>
 
-                    <Share
-                        socialConfig={{
-                            // twitterHandle,
-                            config: {
-                                // url: `${`post.fields.slug`}`,
-                                url: `${`https://dev-hamdannur.netlify.app/`}${urlD}`,
-                                // url: `${`https://swas.io/blog/social-share-button-for-gatsby-blog-pages/`}`,
-
-                                // title: `${post.title}`,
-                            },
-                        }}
-
-                    />
                 </div>
 
                 <div className="w-full flex items-center lg:flex lg:items-center lg:w-auto">
@@ -120,6 +108,28 @@ const DetailGallery = ({ data, pageContext }) => {
                     <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 text-center justify-center pb-12">
                         {/* <h2 className="text-3xl lg:text-5xl font-semibold">Creative Design Process</h2> */}
 
+
+
+
+                        <div className="flex space-x-2 py-8">
+                            <p className="font-bold">Share:</p>
+                            <Share
+                                socialConfig={{
+                                    // twitterHandle,
+                                    config: {
+                                        // url: `${`post.fields.slug`}`,
+                                        url: `${urlD}`,
+                                        // url: `${`https://swas.io/blog/social-share-button-for-gatsby-blog-pages/`}`,
+
+                                        // title: `${title}`,
+                                    },
+                                }}
+
+                            />
+
+
+
+                        </div>
 
                         <div className=" py-4 text-left text-xl">
                             {/* <GatsbyImage image={post.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover rounded" /> */}
