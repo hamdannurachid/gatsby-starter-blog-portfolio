@@ -72,7 +72,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   const posts = graphql(`
     query {
-      allMarkdownRemark (filter: {frontmatter: {key: {eq: "gallery"}}}, limit: 2, sort: {fields: frontmatter___date, order: ASC}){
+      allMarkdownRemark (filter: {frontmatter: {key: {eq: "gallery"}}}, sort: {fields: frontmatter___date, order: ASC}){
         edges {
           node {
             fields{
@@ -92,7 +92,7 @@ exports.createPages = ({ graphql, actions }) => {
               contentImage {
                 id
                 childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED, formats: [AVIF])
+                  gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED)
                 }
               }
             }

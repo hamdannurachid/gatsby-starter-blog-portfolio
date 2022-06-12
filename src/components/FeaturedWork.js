@@ -99,7 +99,7 @@ export default function Header() {
 } */}
 
                                                         {/* <img src={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData.images.fallback.src} className="w-full h-full" alt="" /> */}
-                                                        <GatsbyImage image={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={node.frontmatter.title} className="w-full h-full object-cover" />
+                                                        <GatsbyImage image={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={node.frontmatter.title} className="w-full h-full object-cover rounded-lg" />
 
                                                         {/* <GatsbyImage image={node.frontmatter.thumbnailImage} alt={node.frontmatter.title} /> */}
 
