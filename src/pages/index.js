@@ -19,9 +19,6 @@ const IndexPage = () => {
 
         <Hero />
         <FeaturedWork />
-        <p>
-          <Link to="/page-2/" asModal>Page 2 in Modal</Link>
-        </p>
 
       </main>
     </Layout >

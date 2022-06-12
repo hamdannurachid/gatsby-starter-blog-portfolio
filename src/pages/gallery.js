@@ -73,15 +73,18 @@ export default function Gallery() {
                                                 <li>
                                                     <div className="space-y-2">
                                                         <div className="aspect-w-3 aspect-h-2">
-                                                            <GatsbyImage image={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={node.frontmatter.title} className="w-full h-full object-cover rounded-lg" />
+                                                            <Link to={node.fields.slug} asModal className="underline hover:text-blue-600">
+
+                                                                <GatsbyImage image={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={node.frontmatter.title} className="w-full h-full object-cover rounded-lg" />
+                                                            </Link>
                                                         </div>
-                                                        <div className="space-y-1">
+                                                        {/* <div className="space-y-1">
                                                             <div className="text-lg leading-6 font-medium">
                                                                 <Link to={node.fields.slug} asModal className="underline hover:text-blue-600">
                                                                     <h3>{node.frontmatter.title}</h3>
                                                                 </Link>
                                                             </div>
-                                                        </div>
+                                                        </div> */}
                                                     </div>
                                                 </li>
 

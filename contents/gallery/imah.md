@@ -1,8 +1,8 @@
 ---
-title : "Washine - Carwash Booking App"
+title : "Imah - Search Properties for Rent"
 date: "4-05-2022"
 key: gallery
-thumbnailImage: ../@images/portfolio-02.png
+thumbnailImage: ../@images/imah-01.png
 contentImage: ../@images/content_washine_4x.png
 # contentImage: ../@images/portfolio-02.png
 
@@ -10,4 +10,7 @@ linkproto: https://www.figma.com/proto/yGfkPorbBHPoD3WaXqsVz7/Booking-Car-Wash?n
 ---
 
 
-![alt text](../@images/Washine22.png)
+![alt text](../@images/imah-01.png)
+![alt text](../@images/imah-02.png)
+![alt text](../@images/imah-03.png)
+![alt text](../@images/imah-04.png)

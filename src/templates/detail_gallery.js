@@ -4,8 +4,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
 import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
-
-import Button from '../components/Button';
 import { navigate } from "@gatsbyjs/reach-router";
 
 const menulink = [
@@ -71,6 +69,8 @@ const DetailProject = ({ data, pageContext }) => {
 
                     <h1 className="text-xl">{post.frontmatter.title}</h1>
 
+
+
                 </div>
 
                 <div className="w-full flex items-center lg:flex lg:items-center lg:w-auto">
@@ -97,11 +97,11 @@ const DetailProject = ({ data, pageContext }) => {
             <div className="row ">
                 <div className="mx-auto text-gray-900 ">
 
-                    <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 text-center justify-center ">
+                    <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 text-center justify-center pb-12">
                         {/* <h2 className="text-3xl lg:text-5xl font-semibold">Creative Design Process</h2> */}
 
 
-                        <div className=" py-4 text-left text-lg">
+                        <div className=" py-4 text-left text-xl">
                             {/* <GatsbyImage image={post.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover rounded" /> */}
 
                             <section
@@ -109,9 +109,7 @@ const DetailProject = ({ data, pageContext }) => {
                             />
 
 
-                            <div className="py-8">
-                                <p className="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti deleniti quasi maxime accusantium totam. Possimus, nihil? Similique libero aut dolore, ratione eos quod ut voluptatibus velit maxime nemo at officiis.</p>
-                            </div>
+
 
                         </div>
 
