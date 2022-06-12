@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
 import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
 import { navigate } from "@gatsbyjs/reach-router";
+import Share from '../components/Share';
 
 const menulink = [
     {
@@ -32,7 +33,14 @@ const menulink = [
 
 const DetailProject = ({ data, pageContext }) => {
 
+
+
+
+
     const post = data.markdownRemark;
+
+    const urlD = `gallery/` + post.fields.slug;
+
     const prev = pageContext.prev
         ? {
             url: `/project/${pageContext.prev.fields.slug}`,
@@ -68,9 +76,21 @@ const DetailProject = ({ data, pageContext }) => {
                     </Link>
 
                     <h1 className="text-xl">{post.frontmatter.title}</h1>
+                    <h1> -------ini adalah url: {urlD}</h1>
 
+                    <Share
+                        socialConfig={{
+                            // twitterHandle,
+                            config: {
+                                // url: `${`post.fields.slug`}`,
+                                url: `${`https://dev-hamdannur.netlify.app/`}${urlD}`,
+                                // url: `${`https://swas.io/blog/social-share-button-for-gatsby-blog-pages/`}`,
 
+                                // title: `${post.title}`,
+                            },
+                        }}
 
+                    />
                 </div>
 
                 <div className="w-full flex items-center lg:flex lg:items-center lg:w-auto">
@@ -131,8 +151,20 @@ export default DetailProject
 
 export const query = graphql`
 query galleryPostBySlug($slug: String!) {
+
+    site {
+		siteMetadata {
+			url
+			twitterHandle
+		}
+	}
+
+
     markdownRemark(fields: {slug: {eq: $slug}}) {
         html
+        fields{
+            slug
+          }
         frontmatter {
             title
             date
