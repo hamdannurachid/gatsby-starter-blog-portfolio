@@ -61,7 +61,7 @@ const DetailProject = ({ data, pageContext }) => {
 
                             <div className="bg-white p-4 text-left text-lg">
                                 <GatsbyImage image={post.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" />
-                                {/* <GatsbyImage image={post.frontmatter.contentImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" /> */}
+                                <GatsbyImage image={post.frontmatter.contentImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" />
                                 <section
                                     dangerouslySetInnerHTML={{ __html: post.html }}
                                 />
@@ -131,11 +131,15 @@ query projectPostBySlug($slug: String!) {
             thumbnailImage {
                 id
                 childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED, formats: [AVIF])
+                  gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED)
                 }
               }
               
-
+              contentImage {
+                childImageSharp {
+                  gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED, formats: [AVIF])
+                }
+              }
               
             
         }
