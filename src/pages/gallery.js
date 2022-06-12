@@ -1,11 +1,10 @@
 // Gatsby supports TypeScript natively!
 import React from "react"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 // import Layout from "../components/layout"
 import SEO from "../components/seo"
 // import { graphql } from "gatsby";
 import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
-import { Link } from "gatsby-plugin-modal-routing"
 // import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Section from "../components/Section"
