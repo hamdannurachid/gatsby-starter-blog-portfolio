@@ -57,13 +57,38 @@ const About = () => {
 
             <main>
                 <Section>
-                    <div className="aboutHamdan flex justify-center gap-8" >
-                        <div className="w-2/12">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-8 justify-center gap-8" >
+
+                        {/* <div className="inline-flex sm:justify-end justify-start bg-red-100">
+                            <div className="flex-shrink-0 flex bg-red-600">
+                                <h1>About</h1>
+                            </div>
+                            <Circle />
+                            <div className="text-sm bg-slate-300">Hamdan</div>
+                        </div> */}
+
+
+                        <div className="flex justify-start sm:items-start items-center sm:justify-end ">
+                            <div className="grid grid-flow-row-dense grid-cols-2 sm:grid-cols-2 grid-rows-2">
+                                <div className="col-span-1 sm:col-span-2">
+                                    <h1 className="text-[37px] flex justify-end items-center">About</h1>
+                                </div>
+                                <div className="flex items-center px-2 ">
+                                    <Circle />
+                                </div>
+                                <div className="col-span-3">
+                                    <h1 className="text-[37px]">Hamdan</h1>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        {/* <div className="flex bg-red-200">
                             <h2 className="text-gray-900 flex items-center break-words  gap-x-3">About <Circle />  </h2>
                             <h2 className="text-gray-900  gap-x-3">Hamdan </h2>
-                        </div>
-                        <div className="w-6/12">
-                            <div className="mt-12 lg:mt-0 lg:col-span-2">
+                        </div> */}
+                        <div className="lg:col-span-2">
+                            <div className="lg:mt-0 lg:col-span-2 text-xl">
                                 <p>
                                     Hi there, I have been doing for 2 years as a UI UX Designer. I am a UI/UX designer with WordPress programming Skills.
                                 </p>
@@ -71,15 +96,11 @@ const About = () => {
                                 <p>
                                     I am a passionate UI/UX designer, creating digital experiences with a strong focus on users, problem solving, innovation and collaboration.
                                 </p>
-
-
-
-
                                 <div className="accordion py-1">
                                     {aboutMe.experiences.map((item) => (
                                         <div className="py-1">
                                             <div className="border border-gray-900 rounded-xl">
-                                                <div className="max-w-7xl mx-auto py-12 px-4 sm:py-4 sm:px-6 lg:px-8">
+                                                <div className="mx-auto py-2 px-4 sm:py-4 sm:px-6 lg:px-8">
 
                                                     <Disclosure as="div" key={item.role}>
                                                         {({ open }) => (
@@ -117,7 +138,7 @@ const About = () => {
                                     {aboutMe.educations.map((item) => (
                                         <div className="py-1">
                                             <div className="border border-gray-900 rounded-xl">
-                                                <div className="max-w-7xl mx-auto py-12 px-4 sm:py-4 sm:px-6 lg:px-8">
+                                                <div className=" mx-auto py-2 px-4 sm:py-4 sm:px-6 lg:px-8">
 
                                                     <Disclosure as="div" key={item.school}>
                                                         {({ open }) => (

@@ -12,7 +12,7 @@ const Section = ({ children, className = '', size }) => {
         
         ${className}
         
-        mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8 
+        mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8 max-w-7xl
     `}>
 
             {children}
