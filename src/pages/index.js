@@ -5,9 +5,7 @@ import SEO from "../components/seo"
 import Hero from "../components/Hero"
 import FeaturedWork from "../components/FeaturedWork"
 
-
 const IndexPage = () => {
-
 
   return (
     <Layout>
@@ -15,10 +13,8 @@ const IndexPage = () => {
 
       <main>
 
-
         <Hero />
         <FeaturedWork />
-
 
       </main>
     </Layout >
