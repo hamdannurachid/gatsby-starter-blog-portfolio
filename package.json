@@ -8,7 +8,6 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
-    "@decantyme/gatsby-plugin-modal-routing": "^2.0.0",
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@gatsbyjs/reach-router": "^1.3.7",
     "@headlessui/react": "^1.6.4",

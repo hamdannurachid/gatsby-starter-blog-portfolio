@@ -43,37 +43,3 @@
 @layer utilities {
    
   }
-
-
-
-  .ReactModal__Overlay {
-    opacity: 1;
-    transition: opacity 300ms ease-out;
-  }
-  
-  .ReactModal__Overlay--after-open {
-    opacity: 1;
-    background-color: rgb(0 0 0 / 75%) !important;
-
-  }
-  
-  .ReactModal__Overlay--before-close {
-    opacity: 0;
-  }
-   
-  .ReactModal__Content {
-    transform: translateY(50px);
-    transition: transform 300ms ease-out;
-    border: none !important;
-    /* background: red !important; */
-    inset: 0 !important;
-  }
-  
-  .ReactModal__Content--after-open {
-    transform: translateY(0);
-    padding: 0px !important;
-  }
-  
-  .ReactModal__Content--before-close {
-    transform: translateY(50px);
-  }
