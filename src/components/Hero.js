@@ -45,8 +45,7 @@ const Hero = () => {
                         <h1 className="mt-4 text-[32px] sm:mt-5 sm:text-[53px] lg:mt-6">
                             <span className="block">Hi, Im Hamdan Nurachid </span>
                             <span className="flex items-center gap-x-2">
-                                {/* A Creative  <Circle size="big" />  */}
-                                UI UX Designer
+                                A Creative  <Circle size="big" /> UI UX Designer
                             </span>
                         </h1>
 
