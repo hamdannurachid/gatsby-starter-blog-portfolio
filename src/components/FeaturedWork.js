@@ -123,7 +123,7 @@ export default function Header() {
                                     </ul>
 
                                     <div className="flex items-center justify-center py-12">
-                                        <Link to={`/gallery`}>
+                                        <Link to={`/project`}>
                                             <h4 className="text-lg sm:text-[32px] flex items-center gap-x-2 hover:text-blue-600">
                                                 <span className="block">View </span>
                                                 <Circle size="small" className="bg-blue-600" />

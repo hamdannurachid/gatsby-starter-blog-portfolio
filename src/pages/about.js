@@ -57,11 +57,9 @@ const About = () => {
 
             <main>
                 <Section>
+                    <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-8 justify-center gap-8" >
 
-                    <div className="max-w-4xl mx-auto">
-                        <div className="grid grid-cols-1 lg:grid-cols-3 sm:gap-12 justify-center gap-8" >
-
-                            {/* <div className="inline-flex sm:justify-end justify-start bg-red-100">
+                        {/* <div className="inline-flex sm:justify-end justify-start bg-red-100">
                             <div className="flex-shrink-0 flex bg-red-600">
                                 <h1>About</h1>
                             </div>
@@ -70,115 +68,115 @@ const About = () => {
                         </div> */}
 
 
-                            <div className="flex justify-start sm:items-start items-center sm:justify-end">
-                                <div className="grid grid-flow-row-dense grid-cols-2 sm:grid-cols-2 grid-rows-2">
-                                    <div className="col-span-1 sm:col-span-2">
-                                        <h1 className="text-[37px] flex justify-end items-center">About</h1>
-                                    </div>
-                                    <div className="flex items-center px-2 ">
-                                        <Circle />
-                                    </div>
-                                    <div className="col-span-3">
-                                        <h1 className="text-[37px]">Hamdan</h1>
-                                    </div>
+                        <div className="flex justify-start sm:items-start items-center sm:justify-end ">
+                            <div className="grid grid-flow-row-dense grid-cols-2 sm:grid-cols-2 grid-rows-2">
+                                <div className="col-span-1 sm:col-span-2">
+                                    <h1 className="text-[37px] flex justify-end items-center">About</h1>
+                                </div>
+                                <div className="flex items-center px-2 ">
+                                    <Circle />
+                                </div>
+                                <div className="col-span-3">
+                                    <h1 className="text-[37px]">Hamdan</h1>
                                 </div>
                             </div>
+                        </div>
 
 
-                            {/* <div className="flex bg-red-200">
+                        {/* <div className="flex bg-red-200">
                             <h2 className="text-gray-900 flex items-center break-words  gap-x-3">About <Circle />  </h2>
                             <h2 className="text-gray-900  gap-x-3">Hamdan </h2>
                         </div> */}
-                            <div className="lg:col-span-2">
-                                <div className="lg:mt-0 lg:col-span-1 text-xl">
-                                    <p>
-                                        Hi there, I have been doing for 2 years as a UI UX Designer. I am a UI/UX designer with WordPress programming Skills.
-                                    </p>
-                                    <br />
-                                    <p>
-                                        I am a passionate UI/UX designer, creating digital experiences with a strong focus on users, problem solving, innovation and collaboration.
-                                    </p>
-                                    <div className="accordion py-1">
-                                        {aboutMe.experiences.map((item) => (
-                                            <div className="py-1">
-                                                <div className="border border-gray-900 rounded-xl">
-                                                    <div className="mx-auto py-2 px-4 sm:py-4 sm:px-6 lg:px-8">
+                        <div className="lg:col-span-2">
+                            <div className="lg:mt-0 lg:col-span-2 text-xl">
+                                <p>
+                                    Hi there, I have been doing for 2 years as a UI UX Designer. I am a UI/UX designer with WordPress programming Skills.
+                                </p>
+                                <br />
+                                <p>
+                                    I am a passionate UI/UX designer, creating digital experiences with a strong focus on users, problem solving, innovation and collaboration.
+                                </p>
+                                <div className="accordion py-1">
+                                    {aboutMe.experiences.map((item) => (
+                                        <div className="py-1">
+                                            <div className="border border-gray-900 rounded-xl">
+                                                <div className="mx-auto py-2 px-4 sm:py-4 sm:px-6 lg:px-8">
 
-                                                        <Disclosure as="div" key={item.role}>
-                                                            {({ open }) => (
-                                                                <>
-                                                                    <dt className="text-lg">
-                                                                        <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-900">
-                                                                            <span className="font-medium text-gray-900">Experience</span>
-                                                                            <span className="ml-6 h-7 flex items-center">
-                                                                                <ChevronDownIcon
-                                                                                    className={classNames(open ? 'rotate-180' : '-rotate-90', 'h-6 w-6 transform')}
-                                                                                    aria-hidden="true"
-                                                                                />
-                                                                            </span>
-                                                                        </Disclosure.Button>
-                                                                    </dt>
-                                                                    <Disclosure.Panel as="dd" className="mt-2 pr-0">
-                                                                        <h3>{item.role}</h3>
-                                                                        <h4>{item.company} | {item.month}</h4>
+                                                    <Disclosure as="div" key={item.role}>
+                                                        {({ open }) => (
+                                                            <>
+                                                                <dt className="text-lg">
+                                                                    <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
+                                                                        <span className="font-medium text-gray-900">Experience</span>
+                                                                        <span className="ml-6 h-7 flex items-center">
+                                                                            <ChevronDownIcon
+                                                                                className={classNames(open ? 'rotate-180' : '-rotate-90', 'h-6 w-6 transform')}
+                                                                                aria-hidden="true"
+                                                                            />
+                                                                        </span>
+                                                                    </Disclosure.Button>
+                                                                </dt>
+                                                                <Disclosure.Panel as="dd" className="mt-2 pr-12">
+                                                                    <h3>{item.role}</h3>
+                                                                    <h4>{item.company} | {item.month}</h4>
 
-                                                                        <div className="text-base text-gray-900 p-4" dangerouslySetInnerHTML={{ __html: item.description }}></div>
+                                                                    <div className="text-base text-gray-500 p-4" dangerouslySetInnerHTML={{ __html: item.description }}></div>
 
-                                                                    </Disclosure.Panel>
-                                                                </>
-                                                            )}
-                                                        </Disclosure>
+                                                                </Disclosure.Panel>
+                                                            </>
+                                                        )}
+                                                    </Disclosure>
 
-                                                    </div>
                                                 </div>
                                             </div>
-                                        ))}
-                                    </div>
-
-
-                                    <div className="accordion py-1">
-                                        {aboutMe.educations.map((item) => (
-                                            <div className="py-1">
-                                                <div className="border border-gray-900 rounded-xl">
-                                                    <div className=" mx-auto py-2 px-4 sm:py-4 sm:px-6 lg:px-8">
-
-                                                        <Disclosure as="div" key={item.school}>
-                                                            {({ open }) => (
-                                                                <>
-                                                                    <dt className="text-lg">
-                                                                        <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
-                                                                            <span className="font-medium text-gray-900">Education</span>
-                                                                            <span className="ml-6 h-7 flex items-center">
-                                                                                <ChevronDownIcon
-                                                                                    className={classNames(open ? 'rotate-180' : '-rotate-90', 'h-6 w-6 transform')}
-                                                                                    aria-hidden="true"
-                                                                                />
-                                                                            </span>
-                                                                        </Disclosure.Button>
-                                                                    </dt>
-                                                                    <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                                                                        <h3>{item.school}</h3>
-                                                                        <h4>{item.study}</h4>
-
-                                                                    </Disclosure.Panel>
-                                                                </>
-                                                            )}
-                                                        </Disclosure>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-
-
-
+                                        </div>
+                                    ))}
                                 </div>
 
-                                <Link to={`/belajar`}>
-                                    <Button size="outline" to={`/belajar`} className="mt-4">Download Resume</Button>
-                                </Link>
+
+                                <div className="accordion py-1">
+                                    {aboutMe.educations.map((item) => (
+                                        <div className="py-1">
+                                            <div className="border border-gray-900 rounded-xl">
+                                                <div className=" mx-auto py-2 px-4 sm:py-4 sm:px-6 lg:px-8">
+
+                                                    <Disclosure as="div" key={item.school}>
+                                                        {({ open }) => (
+                                                            <>
+                                                                <dt className="text-lg">
+                                                                    <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
+                                                                        <span className="font-medium text-gray-900">Education</span>
+                                                                        <span className="ml-6 h-7 flex items-center">
+                                                                            <ChevronDownIcon
+                                                                                className={classNames(open ? 'rotate-180' : '-rotate-90', 'h-6 w-6 transform')}
+                                                                                aria-hidden="true"
+                                                                            />
+                                                                        </span>
+                                                                    </Disclosure.Button>
+                                                                </dt>
+                                                                <Disclosure.Panel as="dd" className="mt-2 pr-12">
+                                                                    <h3>{item.school}</h3>
+                                                                    <h4>{item.study}</h4>
+
+                                                                </Disclosure.Panel>
+                                                            </>
+                                                        )}
+                                                    </Disclosure>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+
+
+
                             </div>
+
+                            <Link to={`/belajar`}>
+                                <Button size="outline" to={`/belajar`} className="mt-4">Download Resume</Button>
+                            </Link>
+
                         </div>
                     </div>
                 </Section>
