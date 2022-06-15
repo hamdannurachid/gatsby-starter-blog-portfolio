@@ -29,9 +29,13 @@
 
 
     h4 {
-      font-family: 'Intro-Bd', sans-serif;
+      font-family: 'HK Grotesk', sans-serif;
       @apply text-gray-900
     }
+
+
+
+
   }
   
 @layer components {

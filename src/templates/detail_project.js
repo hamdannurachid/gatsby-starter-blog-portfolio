@@ -144,7 +144,7 @@ query projectPostBySlug($slug: String!) {
             thumbnailImage {
                 id
                 childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED, formats: [AVIF])
+                  gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED)
                 }
               }
               

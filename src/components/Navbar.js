@@ -76,7 +76,7 @@ function Navbar() {
                 <div className="inline-block text-sm -ml-5 py-2">
 
                     <a href='mailto:hamdannurachid6@gmail.com'>
-                        <Button size="default" to={`/belajar`}>Let's Talk</Button>
+                        <Button size="default" to={`/belajar`}>Say Hello!</Button>
                     </a>
                 </div>
             </div>
