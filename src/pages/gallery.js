@@ -67,7 +67,9 @@ export default function Gallery() {
                                                 <li>
                                                     <div className="space-y-2">
                                                         <div className="aspect-w-3 aspect-h-2">
-                                                            <Link to={node.fields.slug} asModal className="underline hover:text-blue-600">
+                                                            <Link to={node.fields.slug} state={{
+                                                                modal: true
+                                                            }} className="underline hover:text-blue-600">
 
                                                                 <GatsbyImage image={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={node.frontmatter.title} className="w-full h-full object-cover rounded-lg" />
                                                             </Link>
