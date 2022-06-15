@@ -4,15 +4,18 @@ import { Link } from "gatsby"
 // import Layout from "../components/layout"
 import SEO from "../components/seo"
 // import { graphql } from "gatsby";
-import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
+import { StaticImage, GatsbyImage, getSrc } from "gatsby-plugin-image"
 // import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Section from "../components/Section"
 import Circle from '../components/Circle';
 import Layout from "../components/layout"
 
-
 export default function Gallery() {
+
+
+
+
     return (
         <Layout>
             <SEO title="Gallery" />
@@ -43,7 +46,12 @@ export default function Gallery() {
             }
           }
        }
+
+       
        `}
+
+
+
                 render={data => (
                     <div>
 

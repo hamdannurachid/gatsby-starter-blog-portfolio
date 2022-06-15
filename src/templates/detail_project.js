@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
-import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
+import { StaticImage, GatsbyImage, getSrc, getSrcSet } from "gatsby-plugin-image"
 import Navbar from "../components/Navbar"
 
 
@@ -25,6 +25,10 @@ const DetailProject = ({ data, pageContext }) => {
         : null
 
     const htmlContent = { __html: post.html };
+
+    const src = getSrc(post.frontmatter.contentImage)
+
+
     return (
         <Layout>
             <SEO title="Portfolio" />
@@ -44,6 +48,9 @@ const DetailProject = ({ data, pageContext }) => {
 
                                         <div className="ml-4 text-left">
                                             <div className="text-base font-medium">{post.frontmatter.title} </div>
+
+
+
                                             <div className="text-sm font-regular">Hamdan Nurachid</div>
                                         </div>
                                     </div>
@@ -62,9 +69,16 @@ const DetailProject = ({ data, pageContext }) => {
                             <div className="bg-white sm:p-4 p-0 text-left text-lg">
                                 <GatsbyImage image={post.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" />
                                 {/* <GatsbyImage image={post.frontmatter.contentImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" /> */}
-                                <section
+
+
+                                {/* <section
                                     dangerouslySetInnerHTML={{ __html: post.html }}
-                                />
+                                /> */}
+
+
+                                {/* <img srcset={getSrcSet(post.frontmatter.contentImage)} /> */}
+
+                                <img src={src} />
 
                             </div>
                         </div>
