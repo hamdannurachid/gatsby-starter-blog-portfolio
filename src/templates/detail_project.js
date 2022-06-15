@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
 import { StaticImage, GatsbyImage, getSrc, getSrcSet } from "gatsby-plugin-image"
-import Navbar from "../components/Navbar"
 
 
 const DetailProject = ({ data, pageContext }) => {
@@ -26,7 +25,7 @@ const DetailProject = ({ data, pageContext }) => {
 
     const htmlContent = { __html: post.html };
 
-    const src = getSrc(post.frontmatter.contentImage)
+    // const src = getSrc(post.frontmatter.contentImage)
 
 
     return (
@@ -69,16 +68,16 @@ const DetailProject = ({ data, pageContext }) => {
                             <div className="bg-white sm:p-4 p-0 text-left text-lg">
                                 <GatsbyImage image={post.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" />
                                 {/* <GatsbyImage image={post.frontmatter.contentImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" /> */}
-
-
                                 {/* <section
                                     dangerouslySetInnerHTML={{ __html: post.html }}
                                 /> */}
+                                {/* <img src={post.frontmatter.contentImage.childImageSharp.gatsbyImageData.images.fallback.src} alt="" className="w-full h-full object-cover" /> */}
 
 
                                 {/* <img srcset={getSrcSet(post.frontmatter.contentImage)} /> */}
 
-                                <img src={src} />
+                                <GatsbyImage image={post.frontmatter.contentImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" />
+
 
                             </div>
                         </div>
@@ -151,7 +150,7 @@ query projectPostBySlug($slug: String!) {
               
               contentImage {
                 childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED, formats: [AVIF])
+                  gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED, formats: [PNG])
                 }
               }
               
