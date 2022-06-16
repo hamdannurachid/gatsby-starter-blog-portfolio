@@ -24,7 +24,7 @@
     h3 {
       font-family: 'HK Grotesk', sans-serif;
       @apply text-gray-900;
-      font-weight: bold;
+      /* font-weight: bold; */
     }
 
 

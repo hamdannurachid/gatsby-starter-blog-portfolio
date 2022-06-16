@@ -49,7 +49,7 @@ const Hero = () => {
                             </span>
                         </h1>
 
-                        <h4 className="mt-4 text-lg sm:mt-5 sm:text-[32px] lg:mt-6 flex items-center gap-x-2">
+                        <h4 className="mt-4 text-lg sm:mt-5 sm:text-[32px] lg:mt-6 flex items-center gap-x-2 font-bold">
                             <span className="block">Research </span>
                             <Circle size="small" />
                             <span className="block">UI UX Design</span>

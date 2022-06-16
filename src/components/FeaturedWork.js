@@ -74,9 +74,9 @@ export default function Header() {
                             <div className="lg:w-8/12 sm:w-full">
                                 <div className="mt-12 lg:mt-0 lg:col-span-2">
                                     <div className="flex items-center gap-x-2">
-                                        <h2 className="text-gray-900 text-[53px]">
+                                        <h1 className="text-gray-900 text-[53px]">
                                             Featured Work
-                                        </h2>
+                                        </h1>
 
                                         <Link to={`/project`}>
                                             <StaticImage src="../images/arrow-down.png" alt="circle down" placeholder="none" width={45} />

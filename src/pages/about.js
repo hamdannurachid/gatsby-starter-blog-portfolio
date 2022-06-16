@@ -20,19 +20,24 @@ const aboutMe = {
             role: "UI UX Designer",
             company: "PT. SAWALA INOVASI INDONESIA",
             month: "JAN 2021 - PRESENT",
-            // description: (props) => (
-            //   <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-            //     <path
-            //       fillRule="evenodd"
-            //       d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-            //       clipRule="evenodd"
-            //     />
-            //   </svg>
-            // ),
-            description: "<ul className=\"list-disc\"><li>Communication and collaboration with product managers, development teams and clients </li> <li>Understand problems related to the application that will be made based on the received stakeholder brief </li> <li>Mapping problem solving from research results that have been carried out in the form of wireframes </li> <li>Designing sitemaps, wireframes, high fidelity designs and prototypes of website and mobile application designs </li> <li>Create design systems and styles for design projects</li> </ul>",
-
-
-
+            descriptions: [
+                "Communication and collaboration with product managers, development teams and clients",
+                "Understand problems related to the application that will be made based on the received stakeholder brief",
+                "Mapping problem solving from research results that have been carried out in the form of wireframes",
+                "Designing sitemaps, wireframes, high fidelity designs and prototypes of website and mobile application designs ",
+                "Create design systems and styles for design projects"
+            ]
+        },
+        {
+            role: "UI UX Designer",
+            company: "NEXT HOUSE LLC, AUSTIN TX",
+            month: "JUL 2021 - NOV 2021",
+            descriptions: [
+                "Doing research related to property investment application development",
+                "Perform UI/UX design of mobile applications for IOS from the provided wireframe concept",
+                "Design, create and define logos and brand identities for apps",
+                "Creating website designs for application marketing ",
+            ]
         },
     ],
 
@@ -98,41 +103,52 @@ const About = () => {
                                     <p>
                                         I am a passionate UI/UX designer, creating digital experiences with a strong focus on users, problem solving, innovation and collaboration.
                                     </p>
+
+
+
                                     <div className="accordion py-1">
-                                        {aboutMe.experiences.map((item) => (
-                                            <div className="py-1">
-                                                <div className="border border-gray-900 rounded-xl">
-                                                    <div className="mx-auto py-2 px-4 sm:py-4 sm:px-6 lg:px-8">
 
-                                                        <Disclosure as="div" key={item.role}>
-                                                            {({ open }) => (
-                                                                <>
-                                                                    <dt className="text-lg">
-                                                                        <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-900">
-                                                                            <span className="font-medium text-gray-900">Experience</span>
-                                                                            <span className="ml-6 h-7 flex items-center">
-                                                                                <ChevronDownIcon
-                                                                                    className={classNames(open ? 'rotate-180' : '-rotate-90', 'h-6 w-6 transform')}
-                                                                                    aria-hidden="true"
-                                                                                />
-                                                                            </span>
-                                                                        </Disclosure.Button>
-                                                                    </dt>
-                                                                    <Disclosure.Panel as="dd" className="mt-2 pr-0">
-                                                                        <h3>{item.role}</h3>
-                                                                        <h4>{item.company} | {item.month}</h4>
+                                        <div className="py-1">
+                                            <div className="border border-gray-900 rounded-xl">
+                                                <div className="mx-auto py-2 px-4 sm:py-4 sm:px-6 lg:px-8">
 
-                                                                        <div className="text-base text-gray-900 p-4" dangerouslySetInnerHTML={{ __html: item.description }}></div>
+                                                    <Disclosure as="div">
+                                                        {({ open }) => (
+                                                            <>
+                                                                <dt className="text-lg">
+                                                                    <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-900">
+                                                                        <span className="font-medium text-gray-900">Experience</span>
+                                                                        <span className="ml-6 h-7 flex items-center">
+                                                                            <ChevronDownIcon
+                                                                                className={classNames(open ? 'rotate-180' : '-rotate-90', 'h-6 w-6 transform')}
+                                                                                aria-hidden="true"
+                                                                            />
+                                                                        </span>
+                                                                    </Disclosure.Button>
+                                                                </dt>
+                                                                <Disclosure.Panel as="dd" className="mt-4 pr-0">
 
-                                                                    </Disclosure.Panel>
-                                                                </>
-                                                            )}
-                                                        </Disclosure>
+                                                                    {aboutMe.experiences.map((item, i) => (
+                                                                        <div className="mb-6">
+                                                                            <h4 className="text-2xl font-bold">{item.role}</h4>
+                                                                            <p className="text-base">{item.company} | {item.month}</p>
+                                                                            <ul className="list-disc list-inside text-base text-gray-600 mt-2" key={i}>
+                                                                                {item.descriptions.map(description => (
+                                                                                    <li className="mb-2 leading-5">{description}</li>
+                                                                                ))}
+                                                                            </ul>
+                                                                        </div>
+                                                                    ))}
 
-                                                    </div>
+                                                                </Disclosure.Panel>
+                                                            </>
+                                                        )}
+                                                    </Disclosure>
+
                                                 </div>
                                             </div>
-                                        ))}
+                                        </div>
+
                                     </div>
 
 
@@ -140,13 +156,13 @@ const About = () => {
                                         {aboutMe.educations.map((item) => (
                                             <div className="py-1">
                                                 <div className="border border-gray-900 rounded-xl">
-                                                    <div className=" mx-auto py-2 px-4 sm:py-4 sm:px-6 lg:px-8">
+                                                    <div className=" mx-auto py-2 px-4 sm:py-4 sm:px-6 lg:px-8 ">
 
                                                         <Disclosure as="div" key={item.school}>
                                                             {({ open }) => (
                                                                 <>
                                                                     <dt className="text-lg">
-                                                                        <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
+                                                                        <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-900">
                                                                             <span className="font-medium text-gray-900">Education</span>
                                                                             <span className="ml-6 h-7 flex items-center">
                                                                                 <ChevronDownIcon
@@ -157,8 +173,8 @@ const About = () => {
                                                                         </Disclosure.Button>
                                                                     </dt>
                                                                     <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                                                                        <h3>{item.school}</h3>
-                                                                        <h4>{item.study}</h4>
+                                                                        <h4 className="texttext-xl font-bold">{item.school}</h4>
+                                                                        <p className="text-base">{item.study}</p>
 
                                                                     </Disclosure.Panel>
                                                                 </>
@@ -176,7 +192,7 @@ const About = () => {
                                 </div>
 
                                 <Link to={`/belajar`}>
-                                    <Button size="outline" to={`/belajar`} className="mt-4">Download Resume</Button>
+                                    <Button size="outline" to={`/belajar`} className="mt-4">Download Full Resume</Button>
                                 </Link>
                             </div>
                         </div>
