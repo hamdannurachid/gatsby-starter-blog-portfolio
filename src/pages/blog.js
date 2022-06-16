@@ -12,7 +12,7 @@ export default ({ data }) => (
     <div>
       <section id="hero" className="mt-4 py-10 bg-gray-50 dark:bg-custom min-h-screen">
         <div className="container mx-auto px-8 sm:px-16">
-          <h2 className="lg:text-3xl font-semibold text-center text-gray-800 dark:text-gray-50 font-bold">Blog</h2>
+          <h2 className="lg:text-3xl font-semibold text-center text-gray-800 dark:text-gray-50">Blog</h2>
           <p className="text-center text-lg text-gray-800 dark:text-gray-50">Baca artikel yang sesuai dengan minat kamu</p>
 
 

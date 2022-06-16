@@ -37,7 +37,7 @@ import {
 const Share = ({ socialConfig }) => (
     <div className="post-social flex space-x-4 text-gray-500">
 
-        <FacebookShareButton url={socialConfig.config.url} className="button outline-1 is-rounded facebook" >
+        <FacebookShareButton url={socialConfig.config.url} className="button outline-1 is-rounded facebook" title={socialConfig.config.title}>
             <FacebookIcon size={32} round={true} bgStyle={{ fill: '' }} />
 
         </FacebookShareButton>
@@ -51,9 +51,7 @@ const Share = ({ socialConfig }) => (
 
         </LinkedinShareButton>
         <WhatsappShareButton url={socialConfig.config.url} className="button outline-1 is-rounded whatsapp" title={socialConfig.config.title} >
-
             <WhatsappIcon size={32} round={true} />
-
         </WhatsappShareButton>
     </div>
 );
