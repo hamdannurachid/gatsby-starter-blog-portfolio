@@ -105,7 +105,7 @@ export default function Header() {
 
                                                     </div>
 
-                                                    <div className="text-lg leading-6 font-medium space-y-1">
+                                                    <div className="text-lg leading-6 font-bold space-y-1">
                                                         <h3 className="text-[32px]"> {node.frontmatter.title}</h3>
                                                     </div>
 

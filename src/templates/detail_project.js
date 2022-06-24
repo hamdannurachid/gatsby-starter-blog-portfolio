@@ -45,12 +45,9 @@ const DetailProject = ({ data, pageContext }) => {
                                         <StaticImage src="../images/hamdan-ava.png" alt="icon" placeholder="none" className="h-12 w-12 rounded-full" />
 
 
-                                        <div className="ml-4 text-left">
-                                            <div className="text-base font-medium">{post.frontmatter.title} </div>
-
-
-
-                                            <div className="text-sm font-regular">Hamdan Nurachid</div>
+                                        <div className="ml-4 text-left text-gray-900">
+                                            <p className="text-base font-bold">{post.frontmatter.title} </p>
+                                            <p className="text-sm font-regular">Hamdan Nurachid</p>
                                         </div>
                                     </div>
 

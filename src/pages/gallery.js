@@ -54,8 +54,6 @@ export default function Gallery() {
 
                 render={data => (
                     <div>
-
-
                         <Section>
                             <div className="flex justify-center gap-8" >
                                 <div className="mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-2">

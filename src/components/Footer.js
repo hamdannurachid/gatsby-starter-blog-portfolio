@@ -55,12 +55,14 @@ const Footer = () => {
                             ))}
 
                         </div>
-                        <h3 className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">For business inquiry please send email to <a href="mailto:hamdannurachid6@gmail.com" className="underline hover:text-white">hamdannurachid6@gmail.com</a> </h3>
+                        <h3 className="mt-8 text-lg font-bold text-gray-300 md:mt-0 md:order-1">For business inquiry please send email to <a href="mailto:hamdannurachid6@gmail.com" className="underline hover:text-white">hamdannurachid6@gmail.com</a> </h3>
                     </div>
 
-                    <div className="border-gray-900 pt-8 md:flex md:items-center md:justify-between">
-                        <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">&copy; 2022. Hamdan Nurachid. All rights reserved.</p>
+                    <div className="border-gray-900 pt-8 flex items-center">
+                        <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">&copy; 2022. Designed and developed from scratch using Gatsby by Hamdan Nurachid. <br /> All rights reserved.</p>
+                        <br />
                     </div>
+
                 </div>
             </footer>
         </div>

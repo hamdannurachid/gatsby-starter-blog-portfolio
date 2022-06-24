@@ -57,12 +57,13 @@ function Navbar() {
                 </button>
             </div>
 
-
             <div className={`${isExpanded ? `block` : `hidden`} w-full block flex-grow lg:flex lg:items-center lg:w-auto`}>
                 <div className="text-md lg:flex-grow lg:ml-10 font-medium">
 
                     {menulink.map((item) => (
                         <Link
+
+                            // activeClassName="text-blue-600 font-bold"
                             to={item.link}
                             className="block mt-4 lg:px-4 text-gray-900 lg:inline-block lg:mt-0"
                         >
