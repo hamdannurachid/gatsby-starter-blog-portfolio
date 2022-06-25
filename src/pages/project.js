@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import FeaturedWork from "../components/FeaturedWork"
 
-
 const IndexPage = () => {
 
 

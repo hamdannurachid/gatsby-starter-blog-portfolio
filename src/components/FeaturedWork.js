@@ -123,11 +123,11 @@ export default function Header() {
                                     </ul>
 
                                     <div className="flex items-center justify-center py-12">
-                                        <Link to={`/gallery`}>
-                                            <h4 className="text-lg sm:text-[32px] flex items-center gap-x-2 hover:text-blue-600">
-                                                <span className="block">View </span>
+                                        <Link to={`/project`}>
+                                            <h4 className="text-lg sm:text-[32px] flex items-center gap-x-2 hover:text-blue-600 hover:font-medium">
+                                                <span className="block">Show </span>
                                                 <Circle size="small" className="bg-blue-600" />
-                                                <span className="block">Gallery</span>
+                                                <span className="block">More</span>
 
                                                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <g clip-path="url(#clip0_829_549)">
