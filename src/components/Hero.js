@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { StaticImage } from "gatsby-plugin-image"
 import Circle from '../components/Circle';
+import { Link } from "gatsby"
 
 
 const sosmed = [
@@ -43,18 +44,38 @@ const Hero = () => {
                 <div className="pb-16 xl:flex xl:items-center xl:justify-between gap-x-2">
                     <div>
                         <h1 className="mt-4 text-[30px] sm:mt-5 sm:text-[53px] lg:mt-6 leading-normal">
-                            <span className="block">Hi, Im Hamdan Nurachid </span>
+                            <span className="block">Hi, I am Hamdan Nurachid </span>
+
                             {/* <span className="flex items-center gap-x-2">
                                 A Creative  <Circle size="big" /> UI UX Designer
                             </span> */}
+
+                            <span className="flex items-center flex-wrap gap-x-2">
+                                <span className="block"> a </span>
+
+                                {/* <span className="inline-flex items-center px-8 py-0.5 rounded-full font-medium border-2 border-gray-900 text-gray-900 text-[24px] sm:text-[48px] hover:bg-blue-600 hover:text-white hover:border-blue-600"> UI UX </span> */}
+                                <Link to={`/project`} className="cursor-pointer">
+                                    <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 hover:bg-blue-600 relative inline-block px-2 before:border-2 before:border-gray-900 hover:-skew-y-3 text-gray-900 hover:text-white">
+                                        <span className="relative"> UI UX</span>
+                                    </span>
+                                </Link>
+                                <span className="block">Designer</span>
+                            </span>
+
+
+
+                        </h1>
+
+
+
+                        {/* <h1 className="mt-4 text-[30px] sm:mt-5 sm:text-[53px] lg:mt-6 leading-normal">
+                            <span className="block">Hi, Im Hamdan Nurachid </span>
                             <span className="flex items-center flex-wrap gap-x-2">
                                 <span className="block"> A Creative </span>
                                 <Circle size="big" />
                                 <span className="block">UI UX Designer</span>
-
                             </span>
-
-                        </h1>
+                        </h1> */}
 
                         <h4 className="mt-4 text-lg sm:mt-5 sm:text-[32px] lg:mt-6 flex items-center gap-x-2 font-bold">
                             <span className="block">Research </span>
@@ -84,9 +105,9 @@ const Hero = () => {
                     </div>
 
                 </div>
-            </div>
+            </div >
 
-        </div>
+        </div >
     )
 }
 
