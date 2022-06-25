@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/Hero"
 import FeaturedWork from "../components/FeaturedWork"
-
+import Approach from "../components/Approach"
 
 const IndexPage = () => {
 
@@ -18,7 +18,7 @@ const IndexPage = () => {
 
         <Hero />
         <FeaturedWork />
-
+        <Approach />
 
       </main>
     </Layout >

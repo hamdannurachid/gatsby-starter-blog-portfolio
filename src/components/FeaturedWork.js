@@ -33,7 +33,7 @@ export default function Header() {
         <StaticQuery
             query={graphql`
       {
-        allMarkdownRemark (filter: {frontmatter: {key: {eq: "portfolio"}}}, limit: 2, sort: {fields: frontmatter___date, order: ASC}){
+        allMarkdownRemark (filter: {frontmatter: {key: {eq: "portfolio"}}}, limit: 3, sort: {fields: frontmatter___date, order: ASC}){
             edges {
               node {
                 fields{
@@ -66,15 +66,12 @@ export default function Header() {
        `}
             render={data => (
                 <div>
-
-
-
                     <Section>
                         <div className="flex justify-center gap-8" >
                             <div className="lg:w-8/12 sm:w-full">
                                 <div className="mt-12 lg:mt-0 lg:col-span-2">
                                     <div className="flex items-center gap-x-2">
-                                        <h1 className="text-gray-900 text-[53px]">
+                                        <h1 className="text-gray-900 text-[37px] sm:text-5xl">
                                             Featured Work
                                         </h1>
 
@@ -105,8 +102,8 @@ export default function Header() {
 
                                                     </div>
 
-                                                    <div className="text-lg leading-6 font-bold space-y-1">
-                                                        <h3 className="text-[32px]"> {node.frontmatter.title}</h3>
+                                                    <div className="leading-6 space-y-1">
+                                                        <h3 className="text-2xl sm:text-[32px] font-bold"> {node.frontmatter.title}</h3>
                                                     </div>
 
                                                     {/* <p className="text-gray-900 text-lg">{person.bio}</p> */}
@@ -124,7 +121,7 @@ export default function Header() {
 
                                     <div className="flex items-center justify-center py-12">
                                         <Link to={`/project`}>
-                                            <h4 className="text-lg sm:text-[32px] flex items-center gap-x-2 hover:text-blue-600 hover:font-medium">
+                                            <h4 className="text-xl sm:text-[32px] font-medium flex items-center gap-x-2 hover:text-blue-600 hover:font-bold">
                                                 <span className="block">Show </span>
                                                 <Circle size="small" className="bg-blue-600" />
                                                 <span className="block">More</span>

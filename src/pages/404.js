@@ -10,7 +10,7 @@ const NotFoundPage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="404: Not Found" />
-      <div className="bg-white min-h-full px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
+      <div className="min-h-full px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
         <div className="max-w-max mx-auto">
           <main className="sm:flex">
             <p className="text-4xl font-extrabold text-blue-600 sm:text-5xl">404</p>
@@ -24,7 +24,7 @@ const NotFoundPage = ({ data, location }) => {
           </main>
         </div>
       </div>
-    </Layout>
+    </Layout >
   )
 }
 

@@ -13,9 +13,6 @@ import Layout from "../components/layout"
 
 export default function Gallery() {
 
-
-
-
     return (
         <Layout>
             <SEO title="Gallery" />
@@ -59,7 +56,7 @@ export default function Gallery() {
                                 <div className="mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-2">
                                     <div className="space-y-12">
                                         <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
-                                            <h1 className="text-gray-900 text-[53px] flex items-center gap-x-2 ">
+                                            <h1 className="text-gray-900 text-[37px] sm:text-5xl flex items-center gap-x-2 ">
                                                 Gallery
                                                 <Circle size="large" className="bg-blue-600" />
                                                 Design

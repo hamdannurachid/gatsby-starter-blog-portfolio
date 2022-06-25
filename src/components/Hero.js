@@ -42,11 +42,18 @@ const Hero = () => {
             <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
                 <div className="pb-16 xl:flex xl:items-center xl:justify-between gap-x-2">
                     <div>
-                        <h1 className="mt-4 text-[32px] sm:mt-5 sm:text-[53px] lg:mt-6">
+                        <h1 className="mt-4 text-[30px] sm:mt-5 sm:text-[53px] lg:mt-6 leading-normal">
                             <span className="block">Hi, Im Hamdan Nurachid </span>
-                            <span className="flex items-center gap-x-2">
+                            {/* <span className="flex items-center gap-x-2">
                                 A Creative  <Circle size="big" /> UI UX Designer
+                            </span> */}
+                            <span className="flex items-center flex-wrap gap-x-2">
+                                <span className="block"> A Creative </span>
+                                <Circle size="big" />
+                                <span className="block">UI UX Designer</span>
+
                             </span>
+
                         </h1>
 
                         <h4 className="mt-4 text-lg sm:mt-5 sm:text-[32px] lg:mt-6 flex items-center gap-x-2 font-bold">
@@ -56,10 +63,8 @@ const Hero = () => {
                             <Circle size="small" />
                             <span className="block">Prototyping</span>
                         </h4>
-                        <div className="mt-8 border-gray-900 pt-8 md:flex md:items-center md:justify-between">
+                        <div className="mt-6 sm:mt-12 border-gray-900 md:flex md:items-center md:justify-between">
                             <div className="flex space-x-6 md:order-2">
-
-
                                 {sosmed.map((item) => (
                                     <div key={item.name}>
                                         <a href={item.link} target="_blank" className="text-gray-900 hover:text-black">
@@ -74,10 +79,8 @@ const Hero = () => {
 
                         </div>
                     </div>
-                    <div className="xl:w-2/5">
-                        <StaticImage src="../images/hamdan-ava.png" alt="icon" placeholder="none" className='w-full py-4 sm:py-0' />
-
-
+                    <div className="xl:w-2/5 mt-12 sm:mt-0">
+                        <StaticImage src="../images/hamdan-ava.png" alt="icon" placeholder="none" className='w-full p-8' />
                     </div>
 
                 </div>

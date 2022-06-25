@@ -46,7 +46,24 @@ const DetailGallery = ({ data, pageContext }) => {
                                     className="block mr-4 text-xl lg:inline-block lg:mt-0 text-gray-900">
                                     <StaticImage src="../images/nav-ico.png" alt="icon" placeholder="none" width={140} />
                                 </Link>
+
                             </div>
+
+
+                            {modal ? (
+                                <Link to={closeTo} className="block sm:hidden">
+                                    <div className="p-4 bg-gray-100 rounded-xl hover:bg-blue-50">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-500" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </div>
+                                </Link>
+                            ) : (
+                                <></>
+                            )}
+
+
 
                             <div class="min-w-0 flex-1 pl-5 py-1 text-sm text-gray-500 sm:py-3">
                                 <h3 className="text-xl font-bold text-gray-900 hidden sm:block">{post.frontmatter.title}</h3>
@@ -61,7 +78,7 @@ const DetailGallery = ({ data, pageContext }) => {
                             <div className="inline-block text-sm -ml-5 py-2">
 
                                 {modal ? (
-                                    <Link to={closeTo}>
+                                    <Link to={closeTo} className="hidden sm:block">
                                         <div className="p-4 bg-gray-100 rounded-xl hover:bg-blue-50">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-500" fill="none"
                                                 viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
