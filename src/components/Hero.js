@@ -43,14 +43,14 @@ const Hero = () => {
             <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
                 <div className="pb-16 xl:flex xl:items-center xl:justify-between gap-x-2">
                     <div>
-                        <h1 className="mt-4 text-[30px] sm:mt-5 sm:text-[53px] lg:mt-6 leading-normal">
-                            <span className="block">Hi, I am Hamdan Nurachid </span>
+                        <h1 className="mt-4 text-[40px] sm:mt-5 sm:text-[53px] lg:mt-6 leading-normal text-center">
+                            <span className="block leading-tight">Hi, I am Hamdan Nurachid, </span>
 
                             {/* <span className="flex items-center gap-x-2">
                                 A Creative  <Circle size="big" /> UI UX Designer
                             </span> */}
 
-                            <span className="flex items-center flex-wrap gap-x-2">
+                            <span className="flex items-center flex-wrap gap-x-2 sm:justify-start justify-center mt-2">
                                 <span className="block"> a </span>
 
                                 {/* <span className="inline-flex items-center px-8 py-0.5 rounded-full font-medium border-2 border-gray-900 text-gray-900 text-[24px] sm:text-[48px] hover:bg-blue-600 hover:text-white hover:border-blue-600"> UI UX </span> */}
@@ -77,7 +77,7 @@ const Hero = () => {
                             </span>
                         </h1> */}
 
-                        <h4 className="mt-4 text-lg sm:mt-5 sm:text-[32px] lg:mt-6 flex items-center gap-x-2 font-bold">
+                        <h4 className="mt-4 text-lg sm:mt-5 sm:text-[32px] lg:mt-6 flex items-center gap-x-2 font-bold sm:justify-start justify-center">
                             <span className="block">Research </span>
                             <Circle size="small" />
                             <span className="block">UI UX Design</span>
@@ -85,7 +85,7 @@ const Hero = () => {
                             <span className="block">Prototyping</span>
                         </h4>
                         <div className="mt-6 sm:mt-12 border-gray-900 md:flex md:items-center md:justify-between">
-                            <div className="flex space-x-6 md:order-2">
+                            <div className="flex space-x-6 md:order-2  justify-center">
                                 {sosmed.map((item) => (
                                     <div key={item.name}>
                                         <a href={item.link} target="_blank" className="text-gray-900 hover:text-black">
