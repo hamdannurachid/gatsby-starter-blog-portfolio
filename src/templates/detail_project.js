@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
-import { StaticImage, GatsbyImage, getSrc, getSrcSet } from "gatsby-plugin-image"
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
 
 
 const DetailProject = ({ data, pageContext }) => {
@@ -73,8 +73,10 @@ const DetailProject = ({ data, pageContext }) => {
 
                                 {/* <img srcset={getSrcSet(post.frontmatter.contentImage)} /> */}
 
-                                <GatsbyImage image={post.frontmatter.contentImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" />
-
+                                {/* <GatsbyImage image={post.frontmatter.contentImage.childImageSharp.gatsbyImageData} alt={post.frontmatter.title} className="w-full h-full object-cover" /> */}
+                                <section
+                                    dangerouslySetInnerHTML={htmlContent}
+                                />
 
                             </div>
                         </div>

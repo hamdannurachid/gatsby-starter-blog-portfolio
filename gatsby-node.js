@@ -82,7 +82,6 @@ exports.createPages = ({ graphql, actions }) => {
               date
               title 
               key
-              category
             }
           }
         }
