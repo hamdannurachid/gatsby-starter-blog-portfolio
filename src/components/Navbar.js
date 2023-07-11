@@ -11,11 +11,11 @@ const menulink = [
         link: '/',
 
     },
-    {
-        name: 'About',
-        link: '/about',
+    // {
+    //     name: 'About',
+    //     link: '/about',
 
-    },
+    // },
     {
         name: 'Project',
         link: '/project',
