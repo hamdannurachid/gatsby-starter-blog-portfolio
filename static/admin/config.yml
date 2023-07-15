@@ -12,7 +12,7 @@ backend:
 local_backend: true
 
 media_folder: static/assets
-public_folder: /assets
+public_folder: ../../static/assets
 
 collections:
   - name: works
