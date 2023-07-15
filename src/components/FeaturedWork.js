@@ -33,7 +33,7 @@ export default function Header() {
         <StaticQuery
             query={graphql`
       {
-        allMarkdownRemark (filter: {frontmatter: {key: {eq: "portfolio"}}}, limit: 3, sort: {fields: frontmatter___date, order: ASC}){
+        allMarkdownRemark (filter: {frontmatter: {key: {eq: "portfolio"}}}, limit: 10, sort: {fields: frontmatter___date, order: ASC}){
             edges {
               node {
                 fields{
