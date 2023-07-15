@@ -18,6 +18,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
+    `gatsby-plugin-netlify-cms`,
 
     {
       resolve: `gatsby-source-filesystem`,

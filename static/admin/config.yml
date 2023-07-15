@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: hamdannurachid/gatsby-starter-blog-portfolio
+  branch: portfolio-with-cms
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
+
+local_backend: true
+
+media_folder: static/assets
+public_folder: ../../static/assets
+
+collections:
+  - name: works
+    preview: false
+    label: Work Portfolio
+    folder: contents/works
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: key, label: Template Key, required: true, widget: hidden, default: works }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
