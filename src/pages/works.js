@@ -29,6 +29,11 @@ export default function Works() {
                 frontmatter {
                   date
                   title
+                  thumbnailImage {
+                    childImageSharp {
+                      gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED)
+                    }
+                  }
                 }
                 html
               }
@@ -66,7 +71,8 @@ export default function Works() {
                                                                 modal: true
                                                             }} className="underline hover:text-blue-600">
 
-                                                                {/* <GatsbyImage image={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={node.frontmatter.title} className="w-full h-full object-cover rounded-lg" /> */}
+<GatsbyImage image={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={node.frontmatter.title} className="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105" />
+
                                                             </Link>
                                                         </div>
                                                         <h3>{node.frontmatter.title}</h3>

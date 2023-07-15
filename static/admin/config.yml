@@ -25,4 +25,5 @@ collections:
       - { name: key, label: Template Key, required: true, widget: hidden, default: works }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
+      - { name: thumbnailImage, label: Featured Image, widget: image }
       - { name: body, label: Body, widget: markdown }
