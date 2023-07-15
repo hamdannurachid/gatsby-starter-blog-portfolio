@@ -44,7 +44,7 @@ function Navbar() {
                     className="block mr-4 text-xl lg:inline-block lg:mt-0 text-gray-900"
                 >
                     {/* {siteTitle} */}
-                    <StaticImage src="../images/nav-ico.png" alt="icon" placeholder="none" width={238} />
+                    <StaticImage src="../images/nav-ico.png" alt="icon" placeholder="none" width={200} />
 
 
                 </Link>
@@ -58,7 +58,7 @@ function Navbar() {
             </div>
 
             <div className={`${isExpanded ? `block` : `hidden`} w-full block flex-grow lg:flex lg:items-center lg:w-auto`}>
-                <div className="text-md lg:flex-grow lg:ml-10 font-medium">
+                <div className="text-md lg:flex-grow lg:ml-10 font-medium ">
 
                     {menulink.map((item) => (
                         <Link

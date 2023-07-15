@@ -68,91 +68,35 @@ export default function Header() {
                 <div>
                     <Section>
                         <div className="flex justify-center gap-8" >
-                            <div className="lg:w-8/12 sm:w-full">
-                                <div className="mt-12 lg:mt-0 lg:col-span-2">
+                                <div className="w-full mt-12 lg:mt-0 lg:col-span-2">
                                     <div className="flex items-center gap-x-2">
-                                        <h1 className="text-gray-900 text-[37px] sm:text-5xl">
-                                            Featured Work
-                                        </h1>
-
-                                        <Link to={`/project`}>
-                                            <StaticImage src="../images/arrow-down.png" alt="circle down" placeholder="none" width={45} />
-                                        </Link>
+                                        <h4 className="text-gray-900 text-xl font-bold tracking-wide">
+                                            FEATURED WORK
+                                        </h4>
+                                        <StaticImage src="../images/arrow-down.png" alt="circle down" placeholder="none" width={24} />
                                     </div>
-
-
-
-                                    <ul
-                                        role="list"
-                                        className="space-y-12 mt-8 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8"
-                                    >
+                                    <div className="mx-auto mt-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                                         {data.allMarkdownRemark.edges.map(({ node }) => (
-                                            <li>
-                                                <div className="space-y-4 my-2">
-                                                    <div className="aspect-w-3 aspect-h-2 ">
-
-                                                        {/* {node.frontmatter.thumbnailImage &&
-<Img fluid={node.frontmatter.thumbnailImage.childImageSharp.fluid} className="w-full h-full object-cover" />
-} */}
-
-                                                        {/* <img src={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData.images.fallback.src} className="w-full h-full" alt="" /> */}
-                                                        <GatsbyImage image={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={node.frontmatter.title} className="w-full h-full object-cover" />
-
-                                                        {/* <GatsbyImage image={node.frontmatter.thumbnailImage} alt={node.frontmatter.title} /> */}
-
+                                            <Link to={`/project/` + node.fields.slug}>
+                                                <article className="flex flex-col items-start justify-between hover:shadow-lg border-2 border-gray-200 overflow-hidden rounded-lg">
+                                                    <div className="relative w-full overflow-hidden">
+                                                        <GatsbyImage image={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={node.frontmatter.title} className="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105" />
+                                                       
                                                     </div>
-
-                                                    <div className="leading-6 space-y-1">
-                                                        <h3 className="text-2xl sm:text-[32px] font-bold"> {node.frontmatter.title}</h3>
+                                                    <div className="w-full p-4">
+                                                        <h3 className="mt-3 text-2xl font-semibold leading-tight text-gray-900 group-hover:text-gray-600">
+                                                            {node.frontmatter.title}
+                                                        </h3>
                                                     </div>
+                                                </article>
+                                            </Link>
 
-                                                    {/* <p className="text-gray-900 text-lg">{person.bio}</p> */}
-
-                                                    <div className="my-4">
-                                                        <Link to={`/project/` + node.fields.slug} className="underline hover:text-blue-600">
-                                                            View Study Case
-                                                        </Link>
-
-                                                    </div>
-                                                </div>
-                                            </li>
                                         ))}
-                                    </ul>
-
-                                    <div className="flex items-center justify-center py-12">
-                                        <Link to={`/project`}>
-                                            <h4 className="text-xl sm:text-[32px] font-medium flex items-center gap-x-2 hover:text-blue-600 hover:font-bold">
-                                                <span className="block">Show </span>
-                                                <Circle size="small" className="bg-blue-600" />
-                                                <span className="block">More</span>
-
-                                                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_829_549)">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.8529 2.85662C28.1563 2.85662 33.2424 4.96336 36.9924 8.7134C40.7425 12.4634 42.8492 17.5496 42.8492 22.8529C42.8492 28.1563 40.7425 33.2424 36.9924 36.9924C33.2424 40.7425 28.1563 42.8492 22.8529 42.8492C17.5496 42.8492 12.4634 40.7425 8.71339 36.9924C4.96336 33.2424 2.85661 28.1563 2.85661 22.8529C2.85661 17.5496 4.96336 12.4634 8.7134 8.7134C12.4634 4.96336 17.5496 2.85662 22.8529 2.85662ZM22.8529 45.7058C28.9139 45.7058 34.7266 43.2981 39.0124 39.0124C43.2981 34.7266 45.7058 28.9139 45.7058 22.8529C45.7058 16.7919 43.2981 10.9792 39.0124 6.69347C34.7266 2.40771 28.9139 1.26387e-06 22.8529 9.98933e-07C16.7919 7.33999e-07 10.9792 2.40771 6.69346 6.69346C2.40771 10.9792 -7.33999e-07 16.7919 -9.98933e-07 22.8529C-1.26387e-06 28.9139 2.40771 34.7266 6.69346 39.0124C10.9792 43.2981 16.7919 45.7058 22.8529 45.7058ZM12.8548 24.2812C12.476 24.2812 12.1127 24.1307 11.8448 23.8629C11.5769 23.595 11.4265 23.2317 11.4265 22.8529C11.4265 22.4741 11.5769 22.1108 11.8448 21.843C12.1127 21.5751 12.476 21.4246 12.8548 21.4246L29.4031 21.4246L23.27 15.2943C23.0018 15.0261 22.8511 14.6624 22.8511 14.2831C22.8511 13.9038 23.0018 13.54 23.27 13.2718C23.5382 13.0036 23.9019 12.853 24.2812 12.853C24.6605 12.853 25.0243 13.0036 25.2925 13.2718L33.8623 21.8417C33.9953 21.9744 34.1008 22.132 34.1729 22.3055C34.2449 22.479 34.2819 22.665 34.2819 22.8529C34.2819 23.0408 34.2449 23.2268 34.1729 23.4003C34.1008 23.5739 33.9953 23.7315 33.8623 23.8642L25.2925 32.434C25.0243 32.7022 24.6605 32.8529 24.2812 32.8529C23.9019 32.8529 23.5382 32.7022 23.27 32.434C23.0018 32.1658 22.8511 31.802 22.8511 31.4228C22.8511 31.0435 23.0018 30.6797 23.27 30.4115L29.4031 24.2812L12.8548 24.2812Z" fill="#2563EB" />
-                                                    </g>
-                                                    <defs>
-                                                        <clipPath id="clip0_829_549">
-                                                            <rect width="45.7058" height="45.7058" fill="white" transform="matrix(-4.37114e-08 1 1 4.37114e-08 0 0)" />
-                                                        </clipPath>
-                                                    </defs>
-                                                </svg>
-
-                                                {/* <StaticImage src="../images/arrow-down.png" alt="circle down" placeholder="none" width={45} /> */}
-                                            </h4>
-                                        </Link>
                                     </div>
-
                                 </div>
-
-
-                            </div>
-
-
+                        
                         </div>
                     </Section>
-
-
-
                 </div>
             )}
         />

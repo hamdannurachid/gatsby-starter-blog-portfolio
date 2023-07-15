@@ -40,68 +40,37 @@ const sosmed = [
 const Hero = () => {
     return (
         <div>
-            <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-                <div className="pb-16 xl:flex xl:items-center xl:justify-between gap-x-2">
+            <div className="max-w-7xl mx-auto py-16 px-4 sm:py-2 sm:px-6 lg:px-2">
+                <div className="xl:flex xl:items-center xl:justify-between gap-x-2">
                     <div>
-                        <h1 className="mt-4 text-[40px] sm:mt-5 sm:text-[53px] lg:mt-6 leading-normal text-center">
+                        <h1 className="mt-4 text-[40px] sm:mt-5 sm:text-[53px] lg:mt-6 leading-normal">
                             <span className="block leading-tight">Hi, I am Hamdan Nurachid, </span>
-
-                            {/* <span className="flex items-center gap-x-2">
-                                A Creative  <Circle size="big" /> UI UX Designer
-                            </span> */}
-
-                            <span className="flex items-center flex-wrap gap-x-2 sm:justify-start justify-center mt-2">
+                            <span className="flex items-center flex-wrap gap-x-2 mt-2">
                                 <span className="block"> a </span>
-
-                                {/* <span className="inline-flex items-center px-8 py-0.5 rounded-full font-medium border-2 border-gray-900 text-gray-900 text-[24px] sm:text-[48px] hover:bg-blue-600 hover:text-white hover:border-blue-600"> UI UX </span> */}
-                                <Link to={`/project`} className="cursor-pointer">
-                                    <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 hover:bg-blue-600 relative inline-block px-2 before:border-2 before:border-gray-900 hover:-skew-y-3 text-gray-900 hover:text-white">
-                                        <span className="relative"> UI UX</span>
-                                    </span>
-                                </Link>
+                                <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 bg-blue-600 relative inline-block px-2 before:border-2 before:border-gray-900 hover:-skew-y-3 text-white">
+                                    <span className="relative"> UI UX</span>
+                                </span>
                                 <span className="block">Designer</span>
                             </span>
-
-
-
                         </h1>
+                        <p className='mt-4 text-lg lg:mt-6 font-medium'>
+                            I have more than 3 years experience in UI/UX design. I contribute to the development of digital public services, e-commerce and learning systems.
+                            <br /><br />
+                            I am skilled at solving product design problems and have completed a variety of projects, including an LMS and Dashboard for Narasi Academy.
+                        </p>
 
-
-
-                        {/* <h1 className="mt-4 text-[30px] sm:mt-5 sm:text-[53px] lg:mt-6 leading-normal">
-                            <span className="block">Hi, Im Hamdan Nurachid </span>
-                            <span className="flex items-center flex-wrap gap-x-2">
-                                <span className="block"> A Creative </span>
-                                <Circle size="big" />
-                                <span className="block">UI UX Designer</span>
-                            </span>
-                        </h1> */}
-
-                        <h4 className="mt-4 text-lg sm:mt-5 sm:text-[32px] lg:mt-6 flex items-center gap-x-2 font-bold sm:justify-start justify-center">
-                            <span className="block">Research </span>
-                            <Circle size="small" />
-                            <span className="block">UI UX Design</span>
-                            <Circle size="small" />
-                            <span className="block">Prototyping</span>
-                        </h4>
-                        <div className="mt-6 sm:mt-12 border-gray-900 md:flex md:items-center md:justify-between">
-                            <div className="flex space-x-6 md:order-2  justify-center">
-                                {sosmed.map((item) => (
-                                    <div key={item.name}>
-                                        <a href={item.link} target="_blank" className="text-gray-900 hover:text-black">
-                                            <span className="sr-only">{item.name}</span>
-                                            <item.icon className="h-10 w-10" aria-hidden="true" />
-                                        </a>
-                                    </div>
-                                ))}
-
-
-                            </div>
-
-                        </div>
                     </div>
-                    <div className="xl:w-2/5 mt-12 sm:mt-0">
-                        <StaticImage src="../images/hamdan-ava.png" alt="icon" placeholder="none" className='w-full p-8' />
+                    <div className="xl:w-3/5 mt-12 sm:mt-0">
+                        <div className="flex space-x-6 sm:justify-end justify-start">
+                            {sosmed.map((item) => (
+                                <div key={item.name}>
+                                    <a href={item.link} target="_blank" className="text-gray-900 hover:text-black">
+                                        <span className="sr-only">{item.name}</span>
+                                        <item.icon className="h-10 w-10" aria-hidden="true" />
+                                    </a>
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
                 </div>

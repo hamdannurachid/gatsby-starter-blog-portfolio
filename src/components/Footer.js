@@ -59,7 +59,7 @@ const Footer = () => {
                     </div>
 
                     <div className="border-gray-900 pt-8 flex items-center">
-                        <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">&copy; 2022. Designed and developed from scratch using ❤️ Gatsby by Hamdan Nurachid. <br /> All rights reserved.</p>
+                        <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">&copy; 2023. Designed and developed from scratch using ❤️ Gatsby by Hamdan Nurachid. <br /> All rights reserved.</p>
                         <br />
                     </div>
 
