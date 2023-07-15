@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 // import Layout from "../components/layout"
 import SEO from "../components/seo"
 // import { graphql } from "gatsby";
-import { StaticImage, GatsbyImage, getSrc } from "gatsby-plugin-image"
+import { StaticImage, GatsbyImage, getSrc, getImage } from "gatsby-plugin-image"
 // import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Section from "../components/Section"
@@ -67,7 +67,7 @@ export default function Works() {
                                                                 modal: true
                                                             }} className="underline hover:text-blue-600">
 
-<GatsbyImage image={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={node.frontmatter.title} className="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105" />
+<GatsbyImage image={getImage(node.frontmatter.thumbnailImage)} alt={node.frontmatter.title} className="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105" />
 
                                                             </Link>
                                                         </div>
