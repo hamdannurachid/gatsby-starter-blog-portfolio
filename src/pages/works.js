@@ -39,12 +39,8 @@ export default function Works() {
               }
             }
           }
-       }
-
-       
+       }       
        `}
-
-
 
                 render={data => (
                     <div>
