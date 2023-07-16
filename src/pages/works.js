@@ -12,7 +12,6 @@ import Circle from '../components/Circle';
 import Layout from "../components/layout"
 
 export default function Works() {
-
     return (
         <Layout>
             <SEO title="Gallery" />
@@ -72,9 +71,9 @@ export default function Works() {
 
                                                             </Link>
                                                         </div>
-                                                        <h3>{node.frontmatter.title}</h3>
+                                                        <h1>{node.frontmatter.title}</h1>
                                                         slug: {node.fields.slug} <br />
-                                                        <h3>{node.excerpt}</h3>
+                                                        <h3>{node.html}</h3>
                                                        
                                                         image: <GatsbyImage image={getImage(node.frontmatter.thumbnailImage)} alt={node.frontmatter.title} className="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105" />
                                                         {/* <div className="space-y-1">
@@ -84,6 +83,11 @@ export default function Works() {
                                                                 </Link>
                                                             </div>
                                                         </div> */}
+
+<section dangerouslySetInnerHTML={{
+      __html: node.html
+    }}></section>
+                                                        
                                                     </div>
                                                 </li>
 
