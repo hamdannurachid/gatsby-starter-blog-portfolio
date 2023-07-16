@@ -18,6 +18,8 @@ thumbnailImage: /assets/cover-simpati.png
 
 ## EXAMPLES
 
+![](/assets/cover-simpati.png)
+
 * [ using-remark](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-remark)
 
 Gatsby can use markdown files to create pages in your site. You add plugins to read and understand folders with markdown files and from them create pages automatically.
