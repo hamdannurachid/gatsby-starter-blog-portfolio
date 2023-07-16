@@ -28,14 +28,14 @@ export default function Works() {
                 frontmatter {
                   date
                   title
-                  thumbnailImage {
+                  featuredImage {
                     childImageSharp {
-                      gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED)
+                        gatsbyImageData(layout: CONSTRAINED width: 1440 placeholder: BLURRED)
                     }
                   }
                 }
                 html
-                excerpt
+
               }
             }
           }
@@ -66,16 +66,17 @@ export default function Works() {
                                                             <Link to={node.fields.slug} state={{
                                                                 modal: true
                                                             }} className="underline hover:text-blue-600">
-hh
+                                                                hh
                                                             </Link>
                                                         </div>
                                                         <h1>{node.frontmatter.title}</h1>
                                                         slug: {node.fields.slug} <br />
-                                                       
-                                                        image: <GatsbyImage image={getImage(node.frontmatter.thumbnailImage)} alt={node.frontmatter.title} className="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105" />
 
-                                                     
-                                                        
+                                                        image: <GatsbyImage image={getImage(node.frontmatter.featuredImage)} alt={node.frontmatter.title} className="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105" />
+                                                        {/* <GatsbyImage image={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={node.frontmatter.title} className="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105" /> */}
+
+
+
 
                                                         {/* <div className="space-y-1">
                                                             <div className="text-lg leading-6 font-medium">
@@ -85,10 +86,10 @@ hh
                                                             </div>
                                                         </div> */}
 
-<section dangerouslySetInnerHTML={{
-      __html: node.html
-    }}></section>
-                                                        
+                                                        <section dangerouslySetInnerHTML={{
+                                                            __html: node.html
+                                                        }}></section>
+
                                                     </div>
                                                 </li>
 
