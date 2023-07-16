@@ -1,10 +1,9 @@
 ---
-title : "Narasi Academy (Admin Dashboad for Manage LMS)"
-date: "10-06-2022"
 key: works
+date: 10-06-2022
+title: Narasi Academy (Admin Dashboad for Manage LMS)
 featuredImage: ../@images/cover-narasi.png
-# contentImage: ../@images/portfolio-02.png
-
+category: archived
 ---
 
 

@@ -18,6 +18,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
@@ -136,6 +137,67 @@ exports.createPages = ({ graphql, actions }) => {
     });
   })
 
-  return Promise.all([collections, posts])
+  const works = graphql(`
+    query {
+      allMarkdownRemark (filter: {frontmatter: {key: {eq: "works"}}}, sort: {fields: frontmatter___title, order: ASC}){
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              date
+              title 
+              key
+            }
+          }
+        }
+      }
+    }
+  `).then(result => {
+
+    const artikel = result.data.allMarkdownRemark.edges;
+
+
+    artikel.forEach(({ node }, index) => {
+
+      const prev = index === 0 ? null : artikel[index - 1].node;
+      const next = index === artikel.length - 1 ? null : artikel[index + 1].node
+
+
+      createPage({
+        path: '/works/' + node.fields.slug,
+        component: path.resolve('./src/templates/detail_works.js'),
+        context: {
+          slug: node.fields.slug,
+          prev,
+          next
+        },
+      });
+
+
+      // Create project post list pages
+      const postsPerPage = 2;
+      const numPages = Math.ceil(posts.length / postsPerPage);
+
+      Array.from({ length: numPages }).forEach((_, i) => {
+        createPage({
+          path: i === 0 ? `/` : `/${i + 1}`,
+          component: path.resolve('./src/templates/detail_works.js'),
+          context: {
+            limit: postsPerPage,
+            skip: i * postsPerPage,
+            numPages,
+            currentPage: i + 1
+          },
+        });
+      });
+
+
+
+    });
+  })
+
+  return Promise.all([collections, posts, works])
 };
 

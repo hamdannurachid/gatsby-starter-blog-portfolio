@@ -22,6 +22,11 @@ const menulink = [
 
     },
     {
+        name: 'Works',
+        link: '/works',
+
+    },
+    {
         name: 'Gallery',
         link: '/gallery',
 
