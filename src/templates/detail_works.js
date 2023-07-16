@@ -15,9 +15,9 @@ const DetailWorks = ({ data, pageContext }) => {
     <Layout>
       <SEO title="Portfolio" />
       <div>
-        <div className="mx-auto pt-14 pb-20 border-t-2">
+        <div className="mx-auto sm:pt-14 pt-8 pb-20 border-t-2">
           <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-5xl lg:px-8 text-center justify-center ">
-            <h2 className="text-3xl lg:text-5xl font-semibold">{post.frontmatter.title}</h2>
+            <h3>{post.frontmatter.title}</h3>
 
             <div className="flex flex-wrap items-center justify-center overflow-hidden text-sm leading-6 my-8">
               <div className="flex items-center justify-center gap-x-4">
@@ -34,7 +34,9 @@ const DetailWorks = ({ data, pageContext }) => {
 
             <div className="text-justify text-lg">
               <GatsbyImage image={getImage(post.frontmatter.featuredImage)} alt={post.frontmatter.title} className="w-full h-full object-cover rounded-lg" />
-              <div dangerouslySetInnerHTML={htmlContent} className="pt-12"
+
+              
+              <div dangerouslySetInnerHTML={htmlContent} className="pt-12 text-content"
                 // style={{ whiteSpace: 'pre-line' }}
               />
             </div>

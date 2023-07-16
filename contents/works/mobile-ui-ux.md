@@ -1,7 +1,7 @@
 ---
 key: works
 date: 2023-07-16T04:49:16.157Z
-title: Mobile UI UX
+title: Sistem Informasi Pencegah Stunting Terintegrasi (SIMPATI)
 thumbnailImage: /assets/20230407_174217.jpg
 datePublished: Jul 20, 2023
 featuredImage: ../../static/assets/cover-simpati.png
@@ -10,6 +10,12 @@ category: featured
 ## Using the Netlify CMS locally
 
 I have recently been building a few websites using [Eleventy](https://www.11ty.dev/). This is a *static site generator*, built using [Jamstack](https://jamstack.org/) methodology.
+
+
+
+## D﻿esign Process
+
+#### W﻿ireframe
 
 This is a great way to get a simple website built, as it gives you static HTML files which you can serve from anywhere. The downside is there is no database and therefore no traditional content management system to administer the content.
 
