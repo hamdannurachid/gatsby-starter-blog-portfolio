@@ -66,16 +66,18 @@ export default function Works() {
                                                             <Link to={node.fields.slug} state={{
                                                                 modal: true
                                                             }} className="underline hover:text-blue-600">
-
-
-
+hh
                                                             </Link>
                                                         </div>
                                                         <h1>{node.frontmatter.title}</h1>
                                                         slug: {node.fields.slug} <br />
-                                                        <h3>{node.html}</h3>
                                                        
                                                         image: <GatsbyImage image={getImage(node.frontmatter.thumbnailImage)} alt={node.frontmatter.title} className="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105" />
+
+                                                        <GatsbyImage image={node.frontmatter.thumbnailImage.childImageSharp.gatsbyImageData} alt={node.frontmatter.title} className="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105" />
+
+                                                        
+
                                                         {/* <div className="space-y-1">
                                                             <div className="text-lg leading-6 font-medium">
                                                                 <Link to={node.fields.slug} asModal className="underline hover:text-blue-600">
