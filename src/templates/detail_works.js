@@ -6,11 +6,14 @@ import { graphql, Link } from "gatsby"
 
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 
+
 const DetailWorks = ({ data, pageContext }) => {
 
   const post = data.markdownRemark;
   const htmlContent = { __html: post.html };
- 
+
+  
+
   return (
     <Layout>
       <SEO title="Portfolio" />
@@ -29,7 +32,7 @@ const DetailWorks = ({ data, pageContext }) => {
                   <circle cx="1" cy="1" r="1" />
                 </svg>
               </div>
-              <time datetime="{post.frontmatter.date}" className="ml-3 font-semibold text-base text-gray-600/50">{post.frontmatter.datePublished}</time>
+              <time datetime="{post.frontmatter.date}" className="ml-3 font-semibold text-base text-gray-600/50">{post.frontmatter.date}</time>
             </div>
 
             <div className="text-justify text-lg">

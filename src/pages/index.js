@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Hero from "../components/Hero"
 import FeaturedWork from "../components/FeaturedWork"
 import Approach from "../components/Approach"
-import NewestWork from "../components/NewestWork"
+import NewestWorkIndex from "../components/NewestWorkIndex"
 import Button from '../components/Button';
 import { Link } from "gatsby"
 
@@ -24,7 +24,7 @@ const IndexPage = () => {
 
 
         <Hero />
-        <NewestWork />
+        <NewestWorkIndex />
         {/* <Approach /> */}
 
 

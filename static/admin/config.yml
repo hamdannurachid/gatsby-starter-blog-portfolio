@@ -20,7 +20,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { name: key, label: Template Key, required: true, widget: hidden, default: works }
-      - { name: date, label: Date, widget: datetime }
+      - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: datePublished, label: Date Published }
       - { name: featuredImage, label: Featured Image, widget: image }

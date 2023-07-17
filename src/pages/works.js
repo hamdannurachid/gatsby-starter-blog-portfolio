@@ -10,8 +10,10 @@ const Works = () => {
         <Layout>
             <SEO title="Project" />
 
+            <section className="pb-24">
             <NewestWork />
             <PreviousWork />
+            </section>
 
         </Layout >
     )

@@ -64,6 +64,10 @@
     .text-content a {
       @apply underline text-gray-900 hover:text-black font-medium
     }
+
+    .text-content a[type="button"] {
+      @apply no-underline text-white
+    }
   
 
   }
