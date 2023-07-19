@@ -3,7 +3,7 @@ key: works
 date: 2023-07-17T00:23:21.771Z
 title: QM Financial Academy
 datePublished: "NULL"
-featuredImage: ../../static/assets/Next-Img-13.png
+featuredImage: ../../static/assets/cover-qm-2.png
 category: featured
 ---
 <br/>
