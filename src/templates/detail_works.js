@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
-
+import moment  from "moment"
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
@@ -11,9 +11,7 @@ const DetailWorks = ({ data, pageContext }) => {
 
   const post = data.markdownRemark;
   const htmlContent = { __html: post.html };
-
   
-
   return (
     <Layout>
       <SEO title="Portfolio" />
@@ -26,13 +24,15 @@ const DetailWorks = ({ data, pageContext }) => {
               <div className="flex items-center justify-center gap-x-4">
                 <div className="flex items-center text-center">
                   <StaticImage src="../images/hamdan-ava.png" alt="icon" placeholder="none" className="mr-2 h-12 w-12 flex-none rounded-full" />
-                  <p className="text-lg font-bold">Hamdan Nurachid </p>
+                  <p className="text-lg font-bold">Hamdan Nurachid</p>
                 </div>
                 <svg viewBox="0 0 2 2" className="hidden h-2 w-2 flex-none fill-gray-400/50 sm:block">
                   <circle cx="1" cy="1" r="1" />
                 </svg>
               </div>
-              <time datetime="{post.frontmatter.date}" className="ml-3 font-semibold text-base text-gray-600/50">{post.frontmatter.date}</time>
+              <time datetime="{post.frontmatter.date}" className="ml-3 font-semibold text-base text-gray-600/50">
+                Publish: {moment(post.frontmatter.date).format("MMMM, DD YYYY")}
+              </time>
             </div>
 
             <div className="text-justify text-lg">
