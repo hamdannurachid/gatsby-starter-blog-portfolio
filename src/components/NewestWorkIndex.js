@@ -55,9 +55,9 @@ export default function NewestWorkIndex() {
                                     <Link to={`/works/` + node.fields.slug}>
                                         <article className="flex flex-col items-start hover:shadow-lg border-2 border-gray-200 overflow-hidden rounded-lg h-full">
                                             <div className="relative w-full overflow-hidden">
-                                                <GatsbyImage image={getImage(node.frontmatter.featuredImage)} alt={node.frontmatter.title} className="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105" />
+                                                <GatsbyImage image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData} alt={node.frontmatter.title} className="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105" />
                                             </div>
-                                            <div className="w-full p-4">
+                                            <div className="w-full p-4 hidden">
                                                 <h4 className="mb-3 group-hover:text-gray-600">
                                                     {node.frontmatter.title}
                                                 </h4>

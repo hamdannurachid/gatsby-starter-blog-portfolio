@@ -1,9 +1,9 @@
 ---
 key: works
 date: 2023-07-16T00:17:34.527Z
-title: "Next House: Rental Calculator"
+title: "Mobile App Design Next House Smart Real Estate Investments "
 datePublished: "Null"
-featuredImage: ../../static/assets/Next-Img-1.png
+featuredImage: ../../static/assets/cover-nexthouse-1-1-.png
 category: archived
 ---
 ![alt text](../../static/assets/Next-Img-1.png)

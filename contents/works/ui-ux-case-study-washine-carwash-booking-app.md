@@ -1,9 +1,9 @@
 ---
 key: works
 date: 2022-09-14T23:04:12.137Z
-title: "UI UX Case Study: Washine - Carwash Booking App"
+title: "UX Study Case: Washine - Carwash Booking App"
 datePublished: "122"
-featuredImage: ../../static/assets/Washine-Img-1.png
+featuredImage: ../../static/assets/cover-carwash.png
 category: archived
 ---
 

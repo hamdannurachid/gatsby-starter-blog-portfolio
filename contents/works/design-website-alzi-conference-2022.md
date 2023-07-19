@@ -3,7 +3,7 @@ key: works
 date: 2023-07-17T00:39:01.531Z
 title: Design Website ALZI Conference 2022
 datePublished: "null"
-featuredImage: ../../static/assets/alzi-conf-01.png
+featuredImage: ../../static/assets/cover-alzi-2.png
 category: archived
 ---
 ![alt text](../../static/assets/alzi-conf-01.png)

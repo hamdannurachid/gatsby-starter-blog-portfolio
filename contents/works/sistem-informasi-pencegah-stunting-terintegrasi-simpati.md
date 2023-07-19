@@ -3,7 +3,7 @@ key: works
 date: 2023-05-28T00:25:51.218Z
 title: Sistem Informasi Pencegah Stunting Terintegrasi (SIMPATI)
 datePublished: "NULL"
-featuredImage: ../../static/assets/cover-simpati.png
+featuredImage: ../../static/assets/cover-simpati2.png
 category: featured
 ---
 Read the complete article here:
