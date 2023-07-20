@@ -5,12 +5,12 @@ module.exports = {
     title: `Hamdan Nurachid`,
     author: {
       name: `Hamdan Nurachid`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      summary: `UI UX Design Portfolio with 3 years experience and familiar in creating Learnin Management System (LMS) products.`,
     },
     twitterHandle: '@swashata',
     url: 'http://localhost:8000/',
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `UI UX Design Portfolio - Hamdan Nurachid | Completed projects for 10+ companies, including LMS, company profiles, and design systems. Passionate about problem-solving in product design.`,
+    siteUrl: `https://dev-hamdannur.netlify.app/`,
     social: {
       twitter: `hamdannur`,
     },
@@ -177,6 +177,31 @@ module.exports = {
       //     modal: false
       //   },
       // }
+    },
+
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-1R0524XP4C", // Google Analytics / GA
+          "AW-CONVERSION_ID", // Google Ads / Adwords / AW
+          "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
+        ],
+        // This object gets passed directly to the gtag config command
+        // This config will be shared across all trackingIds
+        gtagConfig: {
+          optimize_id: "OPT_CONTAINER_ID",
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+
+        },
+      },
     },
 
 
